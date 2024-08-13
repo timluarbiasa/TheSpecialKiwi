@@ -18,6 +18,8 @@
 		44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A642C6B4F92005E5FAD /* EyeContactStageView.swift */; };
 		44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A682C6B5024005E5FAD /* ButtonComponent.swift */; };
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
+		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
+		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		44138A642C6B4F92005E5FAD /* EyeContactStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeContactStageView.swift; sourceTree = "<group>"; };
 		44138A682C6B5024005E5FAD /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		44138A6A2C6B5037005E5FAD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
+		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		44138A662C6B4FA7005E5FAD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				44138A6C2C6B5269005E5FAD /* TimerHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		44138A672C6B4FAF005E5FAD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				44138A6E2C6B5273005E5FAD /* StageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
+				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
 			);
