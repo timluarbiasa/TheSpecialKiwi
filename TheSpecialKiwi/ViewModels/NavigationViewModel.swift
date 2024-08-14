@@ -11,6 +11,7 @@ import SwiftUI
 enum Game {
     case communication
     case eyeContact
+    case lightSensory
 }
 
 class NavigationViewModel: ObservableObject {

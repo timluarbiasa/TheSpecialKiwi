@@ -31,6 +31,8 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
+		EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */; };
+		EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2232C6CA03A001C019A /* LightSensoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		44138A6A2C6B5037005E5FAD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
+		EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
+		EF96E2232C6CA03A001C019A /* LightSensoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */,
 				1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */,
 				1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */,
+				EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EF96E2222C6CA01D001C019A /* LightSensoryStage */,
 				1A59E95C2C6C725B00D61FE0 /* Main Menu */,
 				1A59E9322C6C4A7800D61FE0 /* CommunicationStage */,
 				44138A632C6B4E9B005E5FAD /* EyeContactStage */,
@@ -248,6 +254,14 @@
 				44138A6E2C6B5273005E5FAD /* StageManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		EF96E2222C6CA01D001C019A /* LightSensoryStage */ = {
+			isa = PBXGroup;
+			children = (
+				EF96E2232C6CA03A001C019A /* LightSensoryView.swift */,
+			);
+			path = LightSensoryStage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */,
+				EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */,
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
 				1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
@@ -388,6 +403,7 @@
 				1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */,
+				EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
 				1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */,
 				1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */,
@@ -562,7 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -591,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
