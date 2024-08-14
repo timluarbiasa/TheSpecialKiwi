@@ -25,7 +25,8 @@ struct TheSpecialKiwiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView()
+                .environmentObject(NavigationViewModel())
         }
         .modelContainer(sharedModelContainer)
     }

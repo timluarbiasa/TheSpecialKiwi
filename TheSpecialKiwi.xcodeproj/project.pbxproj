@@ -11,8 +11,13 @@
 		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
 		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
 		1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */; };
-		1A59E9432C6C631E00D61FE0 /* EyeContactStageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9422C6C631E00D61FE0 /* EyeContactStageViewModel.swift */; };
-		1A59E9452C6C632400D61FE0 /* EyeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9442C6C632400D61FE0 /* EyeModel.swift */; };
+		1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */; };
+		1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9572C6C720A00D61FE0 /* EyeModel.swift */; };
+		1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */; };
+		1A59E95D2C6C725B00D61FE0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */; };
+		1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */; };
+		1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */; };
+		1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -50,8 +55,13 @@
 		1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeModel.swift; sourceTree = "<group>"; };
 		1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameViewModel.swift; sourceTree = "<group>"; };
 		1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameView.swift; sourceTree = "<group>"; };
-		1A59E9422C6C631E00D61FE0 /* EyeContactStageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyeContactStageViewModel.swift; path = ../../../../../../Downloads/EyeContactStageViewModel.swift; sourceTree = "<group>"; };
-		1A59E9442C6C632400D61FE0 /* EyeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyeModel.swift; path = ../../../../../../Downloads/EyeModel.swift; sourceTree = "<group>"; };
+		1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeContactStageViewModel.swift; sourceTree = "<group>"; };
+		1A59E9572C6C720A00D61FE0 /* EyeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeModel.swift; sourceTree = "<group>"; };
+		1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonModel.swift; sourceTree = "<group>"; };
+		1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationButtonModel.swift; sourceTree = "<group>"; };
+		1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeContactButtonModel.swift; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,7 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */,
-				1A59E9422C6C631E00D61FE0 /* EyeContactStageViewModel.swift */,
+				1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */,
+				1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -110,6 +121,14 @@
 				1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */,
 			);
 			path = CommunicationStage;
+			sourceTree = "<group>";
+		};
+		1A59E95C2C6C725B00D61FE0 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */,
+			);
+			path = "Main Menu";
 			sourceTree = "<group>";
 		};
 		44138A262C6B4AEC005E5FAD = {
@@ -180,7 +199,10 @@
 				44138A6A2C6B5037005E5FAD /* PlayerModel.swift */,
 				1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */,
 				1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */,
-				1A59E9442C6C632400D61FE0 /* EyeModel.swift */,
+				1A59E9572C6C720A00D61FE0 /* EyeModel.swift */,
+				1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */,
+				1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */,
+				1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +210,7 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A59E95C2C6C725B00D61FE0 /* Main Menu */,
 				1A59E9322C6C4A7800D61FE0 /* CommunicationStage */,
 				44138A632C6B4E9B005E5FAD /* EyeContactStage */,
 				44138A622C6B4E8F005E5FAD /* Components */,
@@ -357,20 +380,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */,
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
-				1A59E9432C6C631E00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
+				1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
 				1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
+				1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */,
+				1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */,
 				1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
+				1A59E95D2C6C725B00D61FE0 /* NavigationView.swift in Sources */,
 				1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */,
 				1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */,
-				1A59E9452C6C632400D61FE0 /* EyeModel.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
+				1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
