@@ -11,7 +11,6 @@
 		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
 		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
 		1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */; };
-		1A59E9362C6C4FD100D61FE0 /* EyeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9352C6C4FD100D61FE0 /* EyeModel.swift */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -49,7 +48,6 @@
 		1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeModel.swift; sourceTree = "<group>"; };
 		1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameViewModel.swift; sourceTree = "<group>"; };
 		1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameView.swift; sourceTree = "<group>"; };
-		1A59E9352C6C4FD100D61FE0 /* EyeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeModel.swift; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				44138A6A2C6B5037005E5FAD /* PlayerModel.swift */,
 				1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */,
 				1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */,
-				1A59E9352C6C4FD100D61FE0 /* EyeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,7 +353,6 @@
 			files = (
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
-				1A59E9362C6C4FD100D61FE0 /* EyeModel.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
 				1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
