@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A59E9382C6C531C00D61FE0 /* EyeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9372C6C531C00D61FE0 /* EyeModel.swift */; };
+		1A59E93B2C6C55BD00D61FE0 /* EyeContactStageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E93A2C6C55BD00D61FE0 /* EyeContactStageViewModel.swift */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A59E9372C6C531C00D61FE0 /* EyeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeModel.swift; sourceTree = "<group>"; };
+		1A59E93A2C6C55BD00D61FE0 /* EyeContactStageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeContactStageViewModel.swift; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A59E9392C6C55AC00D61FE0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A59E93A2C6C55BD00D61FE0 /* EyeContactStageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		44138A262C6B4AEC005E5FAD = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		44138A312C6B4AEC005E5FAD /* TheSpecialKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				1A59E9392C6C55AC00D61FE0 /* ViewModels */,
 				44138A612C6B4E71005E5FAD /* Scenes */,
 				44138A5F2C6B4E43005E5FAD /* Models */,
 				44138A342C6B4AEC005E5FAD /* ContentView.swift */,
@@ -148,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				44138A6A2C6B5037005E5FAD /* PlayerModel.swift */,
+				1A59E9372C6C531C00D61FE0 /* EyeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,9 +339,11 @@
 			files = (
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
+				1A59E93B2C6C55BD00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				1A59E9382C6C531C00D61FE0 /* EyeModel.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
