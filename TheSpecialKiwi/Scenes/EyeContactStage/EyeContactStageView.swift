@@ -12,6 +12,11 @@ struct EyeContactStageView: View {
     
     var body: some View {
         ZStack {
+            Image("EyeContactBg")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .rotationEffect(.degrees(0))
             Circle()
                 .fill(Color.black)
                 .frame(width: 30, height: 30)

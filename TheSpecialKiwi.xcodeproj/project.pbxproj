@@ -295,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 44138A262C6B4AEC005E5FAD;
+			packageReferences = (
+				1A720F4E2C6DA86800E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 44138A302C6B4AEC005E5FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -676,6 +679,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A720F4E2C6DA86800E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 44138A272C6B4AEC005E5FAD /* Project object */;
 }
