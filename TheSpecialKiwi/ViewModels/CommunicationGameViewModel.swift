@@ -19,7 +19,7 @@ class CommunicationGameViewModel: ObservableObject {
     
     init() {
         self.arrow = ArrowModel(position: 150)
-        self.gauge = GaugeModel()
+        self.gauge = GaugeModel(position: 150)
     }
     
     func startArrow() {

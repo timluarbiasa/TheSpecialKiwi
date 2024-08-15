@@ -25,7 +25,8 @@ struct TheSpecialKiwiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = CommunicationGameViewModel()
+            CommunicationGameView(viewModel: viewModel)
         }
         .modelContainer(sharedModelContainer)
     }

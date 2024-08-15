@@ -10,23 +10,43 @@ import SwiftUI
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
     
+    let gaugeImageName = "Bar"
+    let arrowImageName = "Arrow"
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(height: viewModel.gauge.totalHeight / 3)
-                Rectangle()
-                    .fill(Color.green)
-                    .frame(height: viewModel.gauge.totalHeight / 3)
-                Rectangle()
-                    .fill(Color.yellow)
-                    .frame(height: viewModel.gauge.totalHeight / 3)
+                //Gauge image
+                Image(gaugeImageName)
+                    .resizable()
+                    .frame(width: 50, height: viewModel.gauge.totalHeight)
+                    .position(x: -300, y: viewModel.gauge.position)
+                    .overlay(
+                    VStack {
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(height: viewModel.gauge.totalHeight / 3)
+                            .position(x: 100, y: 45)
+                            .opacity(0)
+                        Rectangle()
+                            .fill(Color.green)
+                            .frame(height: viewModel.gauge.totalHeight / 3)
+                            .position(x: 100, y: 52)
+                            .opacity(0)
+                        Rectangle()
+                            .fill(Color.yellow)
+                            .frame(height: viewModel.gauge.totalHeight / 3)
+                            .position(x: 100, y: 58)
+                            .opacity(0)
+                    }
+                )
             }
-            Rectangle()
-                .fill(Color.blue)
-                .frame(width: 20, height: 20)
-                .position(x:50, y: viewModel.arrow.position)
+            
+            //Arrow image
+            Image(arrowImageName)
+                .resizable()
+                .frame(width: 30, height: 50)
+                .position(x: -330, y: viewModel.arrow.position)
             
             if !viewModel.resultMessage.isEmpty {
                 Text(viewModel.resultMessage)
@@ -38,7 +58,6 @@ struct CommunicationGameView: View {
             }
         }
         .frame(width: 100, height: viewModel.gauge.totalHeight)
-        .border(Color.black, width: 1)
         .onTapGesture {
             if viewModel.isRunning {
                 viewModel.stopArrow()
