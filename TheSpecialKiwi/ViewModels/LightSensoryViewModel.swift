@@ -9,6 +9,7 @@ import SwiftUI
 
 class LightSensoryViewModel: ObservableObject {
     @Published var rectangleWidth: CGFloat
+    @Published var characterWidth: CGFloat = 75
     @Published var timeRemaining: Int = 10
     @Published var gameOver: Bool = false
     @Published var didWin: Bool = false
@@ -41,18 +42,18 @@ class LightSensoryViewModel: ObservableObject {
     }
 
     func resetGame() {
-        rectangleWidth = screenWidth * 0.1 // Reset the rectangle width to 10% of the screen width
+        rectangleWidth = screenWidth * 0.1
         timeRemaining = 10
         gameOver = false
         didWin = false
-        startTimer() // Restart the timer immediately
+        startTimer()
     }
 
     func handleSwipe() {
-        let increment = screenWidth / 10.0 // Calculate the width increment needed to fill the screen in 10 swipes
+        let increment = screenWidth / 10.0
         rectangleWidth += increment
 
-        if rectangleWidth >= screenWidth {
+        if rectangleWidth > screenWidth + increment {
             rectangleWidth = screenWidth
             didWin = true
             endGame()
