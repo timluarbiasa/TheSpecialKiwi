@@ -21,9 +21,11 @@ struct EyeContactStageView: View {
             if viewModel.currentAsset == viewModel.directEyeContactAsset {
                 Image(viewModel.currentAsset)
                     .frame(width: 300, height: 300)
+                    .position(x: 425, y: 208)
             } else {
                 LottieView(filename: viewModel.currentAsset)
-                    .frame(width: 400, height: 400)
+                    .frame(width: 390, height: 390)
+                    .position(x: 425, y: 208)
             }
             
             if !viewModel.resultMessage.isEmpty {
