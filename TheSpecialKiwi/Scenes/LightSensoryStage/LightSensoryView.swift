@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+import SDWebImageLottieCoder
 
 struct LightSensoryView: View {
     @StateObject private var viewModel: LightSensoryViewModel
-
+    
     init() {
         let screenWidth = UIScreen.main.bounds.width
         _viewModel = StateObject(wrappedValue: LightSensoryViewModel(screenWidth: screenWidth))
     }
-
+    
     var body: some View {
         ZStack {
             Image("LightSensory_Background1")
@@ -23,7 +25,6 @@ struct LightSensoryView: View {
                 .ignoresSafeArea()
             
             if viewModel.gameOver {
-                // Show "You Won" or "You Lose" with background color based on the outcome
                 Color(viewModel.didWin ? .green : .red)
                     .ignoresSafeArea()
                     .overlay(
@@ -32,7 +33,7 @@ struct LightSensoryView: View {
                                 .font(.largeTitle)
                                 .foregroundColor(.white)
                                 .bold()
-
+                            
                             Button(action: {
                                 viewModel.resetGame()
                             }) {
@@ -49,7 +50,8 @@ struct LightSensoryView: View {
             } else {
                 VStack {
                     HStack {
-                        ZStack(alignment: .leading) {                             Rectangle()
+                        ZStack(alignment: .leading) {
+                            Rectangle()
                                 .fill(Color.brown)
                                 .frame(width: viewModel.rectangleWidth, height: 150)
                                 .overlay(
@@ -66,9 +68,20 @@ struct LightSensoryView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                             
-                            Image("LightSensory_KiwiHappy")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
+                            
+                            if viewModel.showKiwiHappy {
+                                WebImage(url: Bundle.main.url(forResource: "KiwiHappy", withExtension: "json"))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 400, height: 400)
+                                    .offset(x: 250, y: 10)
+                            } else {
+                                WebImage(url: Bundle.main.url(forResource: "KiwiHappy", withExtension: "json"))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100)
+                                    .offset(x: 0, y: 0)
+                            }
                             
                             Image("LightSensory_Texture")
                                 .resizable()
@@ -92,6 +105,25 @@ struct LightSensoryView: View {
                             }
                         }
                 )
+                
+//                VStack {
+//                    GeometryReader { geometry in
+//                        ZStack(alignment: .leading) {
+//                            Rectangle()
+//                                .fill(Color.gray.opacity(0.5))
+//                                .frame(width: geometry.size.width, height: 12)
+//                            
+//                            Rectangle()
+//                                .fill(Color.brown)
+//                                .frame(width: geometry.size.width * viewModel.progress, height: 12)
+//                                .animation(.linear(duration: 1), value: viewModel.progress)
+//                        }
+//                    }
+//                    .frame(height: 12)
+//                    .padding(.horizontal, 20)
+//                    .padding(.top, -5)
+//                    .offset(y: -180)
+//                }
             }
         }
     }
