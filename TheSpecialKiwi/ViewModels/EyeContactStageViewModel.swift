@@ -10,47 +10,73 @@ import SwiftUI
 import Combine
 
 class EyeContactStageViewModel: ObservableObject {
-    @Published var eye: EyeModel
-    @Published var resultMessage: String = ""
+    @Published var currentAsset: String = "KiwiLeft"
     @Published var isRunning: Bool = false
+    @Published var resultMessage: String = ""
     
     private var timer: Timer?
-    private let movementBounds: CGRect
+    private var showingDirectEyeContact: Bool = false
     
-    init(movementBounds: CGRect) {
-        self.eye = EyeModel(position: CGPoint(x: movementBounds.midX, y: movementBounds.midY), direction: .up)
-        self.movementBounds = movementBounds
-    }
+    //List of assets
+    let lottieAssets = ["KiwiLeft", "KiwiRight"]
+    let directEyeContactAsset = "KiwiFront"
     
-    func startMovement() {
+    func startGame() {
         isRunning = true
-        resultMessage = ""
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] _ in self?.updateEyePosition()
+        resetGame()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            self.randomizeAsset()
         }
     }
     
-    func stopMovement() {
+    func stopGame() {
         isRunning = false
         timer?.invalidate()
-        timer = nil
-        checkResult()
     }
     
-    private func updateEyePosition() {
-        eye.moveRandomly(within: movementBounds)
-    }
-    
-    func checkResult() {
-        if eye.isLookingAtPlayer() {
-            resultMessage = "You Win!"
+    private func randomizeAsset() {
+        if showingDirectEyeContact {
+            showingDirectEyeContact = false
+            currentAsset = lottieAssets.randomElement()!
         } else {
-            resultMessage = "You Lose!"
+            if Bool.random() {
+                //50% chance to switch to direct eye contact
+                currentAsset = directEyeContactAsset
+                showingDirectEyeContact = true
+                
+                //Start short timer for certain amount of time player has to touch the screen
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+                    if self.showingDirectEyeContact {
+                        self.loseGame()
+                    }
+                }
+            } else {
+                currentAsset = lottieAssets.randomElement()!
+            }
+        }
+    }
+    
+    func handleTap() {
+        if showingDirectEyeContact {
+            winGame()
+        } else {
+            loseGame()
         }
     }
     
     func resetGame() {
-        eye.position = CGPoint(x: movementBounds.midX, y: movementBounds.midY)
-        eye.direction = .up
         resultMessage = ""
+        currentAsset = lottieAssets.randomElement()!
+    }
+    
+    private func winGame() {
+        stopGame()
+        resultMessage = "You Win!"
+    }
+    
+    private func loseGame() {
+        stopGame()
+        resultMessage = "You Lose!"
     }
 }

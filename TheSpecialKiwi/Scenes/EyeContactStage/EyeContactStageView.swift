@@ -12,10 +12,19 @@ struct EyeContactStageView: View {
     
     var body: some View {
         ZStack {
-            Circle()
-                .fill(Color.black)
-                .frame(width: 30, height: 30)
-                .position(viewModel.eye.position)
+            Image("EyeContactBg")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            
+            if viewModel.currentAsset == viewModel.directEyeContactAsset {
+                Image(viewModel.currentAsset)
+                    .frame(width: 300, height: 300)
+            } else {
+                LottieView(filename: viewModel.currentAsset)
+                    .frame(width: 400, height: 400)
+            }
             
             if !viewModel.resultMessage.isEmpty {
                 Text(viewModel.resultMessage)
@@ -26,24 +35,18 @@ struct EyeContactStageView: View {
                     .padding()
             }
         }
-        .frame(width: 300, height: 300)
-        .border(Color.black, width: 1)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onTapGesture {
-            if viewModel.isRunning {
-                viewModel.stopMovement()
-                viewModel.checkResult()
-            } else {
-                viewModel.startMovement()
-            }
+            viewModel.handleTap()
         }
         .onAppear {
-            viewModel.resetGame()
+            viewModel.startGame()
         }
     }
 }
 
 struct EyeContactStageView_Previews: PreviewProvider {
     static var previews: some View {
-        EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: CGRect(x: 0, y: 0, width: 300, height: 300)))
+        EyeContactStageView(viewModel: EyeContactStageViewModel())
     }
 }

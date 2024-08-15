@@ -25,7 +25,7 @@ struct TheSpecialKiwiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EyeContactStageView(viewModel: EyeContactStageViewModel())
         }
         .modelContainer(sharedModelContainer)
     }
