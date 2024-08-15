@@ -18,15 +18,16 @@ struct EyeContactStageView: View {
                 .ignoresSafeArea()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             
-            if viewModel.currentAsset == viewModel.directEyeContactAsset {
-                Image(viewModel.currentAsset)
-                    .frame(width: 300, height: 300)
-                    .position(x: 425, y: 208)
-            } else {
-                LottieView(filename: viewModel.currentAsset)
-                    .frame(width: 390, height: 390)
-                    .position(x: 425, y: 208)
-            }
+            // Lottie animation handling for KiwiLeft and KiwiRight
+            LottieView(
+                filename: viewModel.currentAsset,
+                startFrame: 0,
+                endFrame: 100, // Assuming the animation has 100 frames
+                onFrameUpdate: { frame in
+                    viewModel.updateCurrentFrame(frame)
+                }
+            )
+            .frame(width: 400, height: 400)
             
             if !viewModel.resultMessage.isEmpty {
                 Text(viewModel.resultMessage)

@@ -1,30 +1,24 @@
-//
-//  EyeContactStageViewModel.swift
-//  TheSpecialKiwi
-//
-//  Created by James Cellars on 14/08/24.
-//
-
 import Foundation
 import SwiftUI
+import Lottie
 import Combine
 
 class EyeContactStageViewModel: ObservableObject {
     @Published var currentAsset: String = "KiwiLeft"
     @Published var isRunning: Bool = false
     @Published var resultMessage: String = ""
+    @Published var currentFrame: AnimationFrameTime = 1 // Track the current frame
     
     private var timer: Timer?
-    private var showingDirectEyeContact: Bool = false
     
-    //List of assets
-    let lottieAssets = ["KiwiLeft", "KiwiRight"]
-    let directEyeContactAsset = "KiwiFront"
+    // List of assets (KiwiLeft and KiwiRight animations only)
+    let assets = ["KiwiLeft", "KiwiRight"]
     
     func startGame() {
         isRunning = true
         resetGame()
         
+        // Start timer to randomize assets
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.randomizeAsset()
         }
@@ -36,29 +30,13 @@ class EyeContactStageViewModel: ObservableObject {
     }
     
     private func randomizeAsset() {
-        if showingDirectEyeContact {
-            showingDirectEyeContact = false
-            currentAsset = lottieAssets.randomElement()!
-        } else {
-            if Bool.random() {
-                //50% chance to switch to direct eye contact
-                currentAsset = directEyeContactAsset
-                showingDirectEyeContact = true
-                
-                //Start short timer for certain amount of time player has to touch the screen
-                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
-                    if self.showingDirectEyeContact {
-                        self.loseGame()
-                    }
-                }
-            } else {
-                currentAsset = lottieAssets.randomElement()!
-            }
-        }
+        // Randomly select between KiwiLeft and KiwiRight
+        currentAsset = assets.randomElement()!
     }
     
     func handleTap() {
-        if showingDirectEyeContact {
+        // Check if tap was within the desired frame range for direct eye contact
+        if (currentFrame >= 1 && currentFrame <= 10) || (currentFrame >= 80 && currentFrame <= 90) {
             winGame()
         } else {
             loseGame()
@@ -67,7 +45,8 @@ class EyeContactStageViewModel: ObservableObject {
     
     func resetGame() {
         resultMessage = ""
-        currentAsset = lottieAssets.randomElement()!
+        currentAsset = assets.randomElement()!
+        currentFrame = 0 // Reset the current frame
     }
     
     private func winGame() {
@@ -78,5 +57,10 @@ class EyeContactStageViewModel: ObservableObject {
     private func loseGame() {
         stopGame()
         resultMessage = "You Lose!"
+    }
+    
+    // Function to update the current frame from the LottieView
+    func updateCurrentFrame(_ frame: AnimationFrameTime) {
+        self.currentFrame = frame
     }
 }
