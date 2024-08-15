@@ -22,7 +22,7 @@ struct GaugeModel {
     
     func checkResult(arrowPosition: CGFloat) -> String {
         if arrowPosition > greenZoneTop && arrowPosition < greenZoneBottom {
-            return "You Win!"
+            return "KiwiHappy"
         } else {
             return "You Lose!"
         }

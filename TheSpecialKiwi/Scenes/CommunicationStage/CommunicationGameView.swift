@@ -15,6 +15,16 @@ struct CommunicationGameView: View {
     
     var body: some View {
         ZStack {
+            if !viewModel.resultImageName.isEmpty {
+                Image(viewModel.resultImageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 860, height: 860)
+                    .position(x: 36, y: 170)
+                    .background(Color.white.opacity(0.7))
+                    .padding()
+            }
+            
             VStack(spacing: 0) {
                 //Gauge image
                 Image(gaugeImageName)
@@ -47,15 +57,6 @@ struct CommunicationGameView: View {
                 .resizable()
                 .frame(width: 30, height: 50)
                 .position(x: -330, y: viewModel.arrow.position)
-            
-            if !viewModel.resultMessage.isEmpty {
-                Text(viewModel.resultMessage)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(viewModel.resultMessage == "You Win!" ? . green : .red)
-                    .background(Color.white.opacity(0.7))
-                    .padding()
-            }
         }
         .frame(width: 100, height: viewModel.gauge.totalHeight)
         .onTapGesture {
