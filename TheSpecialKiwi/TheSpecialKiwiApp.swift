@@ -25,9 +25,7 @@ struct TheSpecialKiwiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            let movementBounds = CGRect(x: 0, y: 0, width: 300, height: 300)
-            let viewModel = EyeContactStageViewModel(movementBounds: movementBounds)
-            EyeContactStageView(viewModel: viewModel)
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }
