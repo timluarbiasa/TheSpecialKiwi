@@ -31,6 +31,10 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
+		EF78F1352C6DBD58008867EF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */; };
+		EF78F1382C6DBE86008867EF /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */; };
+		EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F1392C6DD641008867EF /* KiwiLight.json */; };
+		EF78F13F2C6DE220008867EF /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F13E2C6DE220008867EF /* KiwiHappy.json */; };
 		EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */; };
 		EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2232C6CA03A001C019A /* LightSensoryView.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +84,8 @@
 		44138A6A2C6B5037005E5FAD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
+		EF78F1392C6DD641008867EF /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
+		EF78F13E2C6DE220008867EF /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy.json; sourceTree = "<group>"; };
 		EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
 		EF96E2232C6CA03A001C019A /* LightSensoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78F1352C6DBD58008867EF /* SDWebImageSwiftUI in Frameworks */,
+				EF78F1382C6DBE86008867EF /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				EF96E2232C6CA03A001C019A /* LightSensoryView.swift */,
+				EF78F1392C6DD641008867EF /* KiwiLight.json */,
+				EF78F13E2C6DE220008867EF /* KiwiHappy.json */,
 			);
 			path = LightSensoryStage;
 			sourceTree = "<group>";
@@ -280,6 +290,10 @@
 			dependencies = (
 			);
 			name = TheSpecialKiwi;
+			packageProductDependencies = (
+				EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */,
+				EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */,
+			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +366,10 @@
 				Base,
 			);
 			mainGroup = 44138A262C6B4AEC005E5FAD;
+			packageReferences = (
+				EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+			);
 			productRefGroup = 44138A302C6B4AEC005E5FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -368,6 +386,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78F13F2C6DE220008867EF /* KiwiHappy.json in Resources */,
+				EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
 			);
@@ -584,8 +604,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,8 +632,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -744,6 +762,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44138A272C6B4AEC005E5FAD /* Project object */;
 }
