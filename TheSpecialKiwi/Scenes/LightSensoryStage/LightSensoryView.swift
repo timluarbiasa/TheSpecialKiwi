@@ -20,10 +20,7 @@ struct LightSensoryView: View {
             Image("LightSensory_Background1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-            
-            Image("LightSensory_Background2")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
             
             if viewModel.gameOver {
                 // Show "You Won" or "You Lose" with background color based on the outcome
@@ -65,10 +62,20 @@ struct LightSensoryView: View {
                                 .animation(.easeInOut(duration: 0.9), value: viewModel.rectangleWidth)
                                 .offset(x: 0, y: -40)
                             
+                            Image("LightSensory_Background2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                            
                             Image("LightSensory_KiwiHappy")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
+                            
+                            Image("LightSensory_Texture")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .blendMode(.multiply)
                         }
+                        .ignoresSafeArea()
                     }
                 }
                 
@@ -87,7 +94,6 @@ struct LightSensoryView: View {
                 )
             }
         }
-        .ignoresSafeArea()
     }
 }
 
