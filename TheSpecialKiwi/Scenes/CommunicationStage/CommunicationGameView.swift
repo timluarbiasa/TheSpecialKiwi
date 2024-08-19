@@ -10,43 +10,52 @@ import SwiftUI
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
     
+    let backgroundImageName = "BackgroundJPG"
     let gaugeImageName = "Bar"
     let arrowImageName = "Arrow"
     
     var body: some View {
         ZStack {
+            //Background image
+//            Image(backgroundImageName)
+//                .resizable()
+//                .scaledToFill()
+//                .edgesIgnoringSafeArea(.all)
+//                .zIndex(-10)
+            
             if !viewModel.resultImageName.isEmpty {
                 Image(viewModel.resultImageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 860, height: 860)
-                    .position(x: 36, y: 170)
-                    .background(Color.white.opacity(0.7))
                     .padding()
+                    .zIndex(0)
             }
             
+            //Main content
             VStack(spacing: 0) {
                 //Gauge image
                 Image(gaugeImageName)
                     .resizable()
                     .frame(width: 50, height: viewModel.gauge.totalHeight)
-                    .position(x: -300, y: viewModel.gauge.position)
+                    .offset(x: -350, y: 0)
+                    .zIndex(1)
                     .overlay(
                     VStack {
                         Rectangle()
                             .fill(Color.red)
                             .frame(height: viewModel.gauge.totalHeight / 3)
-                            .position(x: 100, y: 45)
+                            .offset(y: 4)
                             .opacity(0)
                         Rectangle()
                             .fill(Color.green)
                             .frame(height: viewModel.gauge.totalHeight / 3)
-                            .position(x: 100, y: 52)
+                            .offset(y: -4)
                             .opacity(0)
                         Rectangle()
                             .fill(Color.yellow)
                             .frame(height: viewModel.gauge.totalHeight / 3)
-                            .position(x: 100, y: 58)
+                            .offset(y: -12)
                             .opacity(0)
                     }
                 )
@@ -56,7 +65,8 @@ struct CommunicationGameView: View {
             Image(arrowImageName)
                 .resizable()
                 .frame(width: 30, height: 50)
-                .position(x: -330, y: viewModel.arrow.position)
+                .offset(x: -380, y: viewModel.arrow.position - 150)
+                .zIndex(2)
         }
         .frame(width: 100, height: viewModel.gauge.totalHeight)
         .onTapGesture {
