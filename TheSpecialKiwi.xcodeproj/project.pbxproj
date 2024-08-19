@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */; };
+		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
+		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
+		1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */; };
+		1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */; };
+		1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9572C6C720A00D61FE0 /* EyeModel.swift */; };
+		1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */; };
+		1A59E95D2C6C725B00D61FE0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */; };
+		1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */; };
+		1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */; };
+		1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -20,6 +31,13 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
+		EF78F1352C6DBD58008867EF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */; };
+		EF78F1382C6DBE86008867EF /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */; };
+		EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F1392C6DD641008867EF /* KiwiLight.json */; };
+		EF78F1432C72F408008867EF /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F1422C72F408008867EF /* KiwiHappy.json */; };
+		EF78F1452C72F71C008867EF /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78F1442C72F71C008867EF /* TimerComponent.swift */; };
+		EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */; };
+		EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2232C6CA03A001C019A /* LightSensoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowModel.swift; sourceTree = "<group>"; };
+		1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeModel.swift; sourceTree = "<group>"; };
+		1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameViewModel.swift; sourceTree = "<group>"; };
+		1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameView.swift; sourceTree = "<group>"; };
+		1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeContactStageViewModel.swift; sourceTree = "<group>"; };
+		1A59E9572C6C720A00D61FE0 /* EyeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeModel.swift; sourceTree = "<group>"; };
+		1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonModel.swift; sourceTree = "<group>"; };
+		1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationButtonModel.swift; sourceTree = "<group>"; };
+		1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeContactButtonModel.swift; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +85,11 @@
 		44138A6A2C6B5037005E5FAD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
+		EF78F1392C6DD641008867EF /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
+		EF78F1422C72F408008867EF /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KiwiHappy.json; path = ../../../../../../../Downloads/KiwiHappy.json; sourceTree = "<group>"; };
+		EF78F1442C72F71C008867EF /* TimerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
+		EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
+		EF96E2232C6CA03A001C019A /* LightSensoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78F1352C6DBD58008867EF /* SDWebImageSwiftUI in Frameworks */,
+				EF78F1382C6DBE86008867EF /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A59E92F2C6C488300D61FE0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */,
+				1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */,
+				1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */,
+				EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1A59E9322C6C4A7800D61FE0 /* CommunicationStage */ = {
+			isa = PBXGroup;
+			children = (
+				1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */,
+			);
+			path = CommunicationStage;
+			sourceTree = "<group>";
+		};
+		1A59E95C2C6C725B00D61FE0 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
 		44138A262C6B4AEC005E5FAD = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +169,7 @@
 		44138A312C6B4AEC005E5FAD /* TheSpecialKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				1A59E92F2C6C488300D61FE0 /* ViewModels */,
 				44138A612C6B4E71005E5FAD /* Scenes */,
 				44138A5F2C6B4E43005E5FAD /* Models */,
 				44138A342C6B4AEC005E5FAD /* ContentView.swift */,
@@ -148,6 +212,12 @@
 			isa = PBXGroup;
 			children = (
 				44138A6A2C6B5037005E5FAD /* PlayerModel.swift */,
+				1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */,
+				1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */,
+				1A59E9572C6C720A00D61FE0 /* EyeModel.swift */,
+				1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */,
+				1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */,
+				1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +225,9 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EF96E2222C6CA01D001C019A /* LightSensoryStage */,
+				1A59E95C2C6C725B00D61FE0 /* Main Menu */,
+				1A59E9322C6C4A7800D61FE0 /* CommunicationStage */,
 				44138A632C6B4E9B005E5FAD /* EyeContactStage */,
 				44138A622C6B4E8F005E5FAD /* Components */,
 			);
@@ -165,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				44138A682C6B5024005E5FAD /* ButtonComponent.swift */,
+				EF78F1442C72F71C008867EF /* TimerComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -193,6 +267,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		EF96E2222C6CA01D001C019A /* LightSensoryStage */ = {
+			isa = PBXGroup;
+			children = (
+				EF96E2232C6CA03A001C019A /* LightSensoryView.swift */,
+				EF78F1392C6DD641008867EF /* KiwiLight.json */,
+				EF78F1422C72F408008867EF /* KiwiHappy.json */,
+			);
+			path = LightSensoryStage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +293,10 @@
 			dependencies = (
 			);
 			name = TheSpecialKiwi;
+			packageProductDependencies = (
+				EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */,
+				EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */,
+			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +369,10 @@
 				Base,
 			);
 			mainGroup = 44138A262C6B4AEC005E5FAD;
+			packageReferences = (
+				EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+			);
 			productRefGroup = 44138A302C6B4AEC005E5FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +389,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78F1432C72F408008867EF /* KiwiHappy.json in Resources */,
+				EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
 			);
@@ -323,14 +417,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */,
+				EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */,
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
+				1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
+				1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
+				1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */,
+				EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				EF78F1452C72F71C008867EF /* TimerComponent.swift in Sources */,
+				1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */,
+				1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */,
+				1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
+				1A59E95D2C6C725B00D61FE0 /* NavigationView.swift in Sources */,
+				1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */,
+				1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
+				1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,14 +602,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,14 +630,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,6 +766,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF78F1332C6DBD2B008867EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF78F1362C6DBD91008867EF /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44138A272C6B4AEC005E5FAD /* Project object */;
 }

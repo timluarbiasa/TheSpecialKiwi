@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import SDWebImageLottieCoder
 
 @main
 struct TheSpecialKiwiApp: App {
@@ -22,10 +23,16 @@ struct TheSpecialKiwiApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    init() {
+        // Register the Lottie coder
+        SDImageCodersManager.shared.addCoder(SDImageLottieCoder.shared)
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView()
+                .environmentObject(NavigationViewModel())
         }
         .modelContainer(sharedModelContainer)
     }
