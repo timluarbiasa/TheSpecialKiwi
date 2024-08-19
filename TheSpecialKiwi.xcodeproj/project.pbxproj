@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A067E672C72F90B003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E662C72F90B003017E5 /* ColorExtension.swift */; };
+		1A067E682C72F90B003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E662C72F90B003017E5 /* ColorExtension.swift */; };
+		1A067E692C72F90B003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E662C72F90B003017E5 /* ColorExtension.swift */; };
 		1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */; };
 		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
 		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
@@ -52,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A067E662C72F90B003017E5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowModel.swift; sourceTree = "<group>"; };
 		1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeModel.swift; sourceTree = "<group>"; };
 		1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				1A59E95B2C6C725B00D61FE0 /* NavigationView.swift */,
+				1A067E662C72F90B003017E5 /* ColorExtension.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
 				1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */,
+				1A067E672C72F90B003017E5 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44138A462C6B4AED005E5FAD /* TheSpecialKiwiTests.swift in Sources */,
+				1A067E682C72F90B003017E5 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A067E692C72F90B003017E5 /* ColorExtension.swift in Sources */,
 				44138A522C6B4AED005E5FAD /* TheSpecialKiwiUITestsLaunchTests.swift in Sources */,
 				44138A502C6B4AED005E5FAD /* TheSpecialKiwiUITests.swift in Sources */,
 			);

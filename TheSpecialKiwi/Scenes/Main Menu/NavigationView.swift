@@ -13,36 +13,30 @@ struct NavigationView: View {
     
     var body: some View {
             NavigationStack {
+                Image("StartPage")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                    .zIndex(-1)
+                    .offset(y: 40)
+                Text("0")
+                    .offset(x: 320, y: -85)
+                    .font(.custom("LilitaOne", size: 36))
+                    .foregroundColor(Color(hex: "#FACF38"))
                 VStack {
-                    Text("Choose a Mini Game")
-                        .font(.largeTitle)
-                        .padding()
                     
                     HStack {
                         Button(action: {
                             viewModel.navigateToGame(.communication)
                         }) {
-                            Text("Communication Game")
+                            Image("StartButton")
                                 .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(8)
                         }
-                        .padding()
-                        
-                        Button(action: {
-                            viewModel.navigateToGame(.eyeContact)
-                        }) {
-                            Text("Eye Contact Game")
-                                .padding()
-                                .background(Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(8)
-                        }
-                        .padding()
+                        .padding(.top, -55)
+                        .padding(.bottom, 26)
+                        .padding(.leading, 550)
                     }
                 }
-                .navigationTitle("Mini Games")
                 .navigationBarBackButtonHidden(!viewModel.isBackButtonVisible)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
