@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A067E7F2C730EC5003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E7E2C730EC5003017E5 /* ColorExtension.swift */; };
+		1A067E822C731466003017E5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A067E812C731466003017E5 /* SDWebImageLottieCoder */; };
 		1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */; };
 		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
 		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
@@ -89,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A720F4D2C6DA7F900E909EC /* Lottie in Frameworks */,
+				1A067E822C731466003017E5 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +275,7 @@
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
 				1A720F4C2C6DA7F900E909EC /* Lottie */,
+				1A067E812C731466003017E5 /* SDWebImageLottieCoder */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -348,6 +351,7 @@
 			mainGroup = 44138A262C6B4AEC005E5FAD;
 			packageReferences = (
 				1A720F4B2C6DA7F900E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1A067E802C731466003017E5 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
 			);
 			productRefGroup = 44138A302C6B4AEC005E5FAD /* Products */;
 			projectDirPath = "";
@@ -742,6 +746,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A067E802C731466003017E5 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		1A720F4B2C6DA7F900E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -753,6 +765,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A067E812C731466003017E5 /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A067E802C731466003017E5 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
 		1A720F4C2C6DA7F900E909EC /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A720F4B2C6DA7F900E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */;
