@@ -34,7 +34,8 @@
 		EF78F1352C6DBD58008867EF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1342C6DBD58008867EF /* SDWebImageSwiftUI */; };
 		EF78F1382C6DBE86008867EF /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF78F1372C6DBE86008867EF /* SDWebImageLottieCoder */; };
 		EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F1392C6DD641008867EF /* KiwiLight.json */; };
-		EF78F13F2C6DE220008867EF /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F13E2C6DE220008867EF /* KiwiHappy.json */; };
+		EF78F1432C72F408008867EF /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = EF78F1422C72F408008867EF /* KiwiHappy.json */; };
+		EF78F1452C72F71C008867EF /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78F1442C72F71C008867EF /* TimerComponent.swift */; };
 		EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */; };
 		EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2232C6CA03A001C019A /* LightSensoryView.swift */; };
 /* End PBXBuildFile section */
@@ -85,7 +86,8 @@
 		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
 		EF78F1392C6DD641008867EF /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
-		EF78F13E2C6DE220008867EF /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy.json; sourceTree = "<group>"; };
+		EF78F1422C72F408008867EF /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KiwiHappy.json; path = ../../../../../../../Downloads/KiwiHappy.json; sourceTree = "<group>"; };
+		EF78F1442C72F71C008867EF /* TimerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
 		EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
 		EF96E2232C6CA03A001C019A /* LightSensoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				44138A682C6B5024005E5FAD /* ButtonComponent.swift */,
+				EF78F1442C72F71C008867EF /* TimerComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,7 +272,7 @@
 			children = (
 				EF96E2232C6CA03A001C019A /* LightSensoryView.swift */,
 				EF78F1392C6DD641008867EF /* KiwiLight.json */,
-				EF78F13E2C6DE220008867EF /* KiwiHappy.json */,
+				EF78F1422C72F408008867EF /* KiwiHappy.json */,
 			);
 			path = LightSensoryStage;
 			sourceTree = "<group>";
@@ -386,7 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF78F13F2C6DE220008867EF /* KiwiHappy.json in Resources */,
+				EF78F1432C72F408008867EF /* KiwiHappy.json in Resources */,
 				EF78F13A2C6DD641008867EF /* KiwiLight.json in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
@@ -425,6 +428,7 @@
 				1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */,
 				EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				EF78F1452C72F71C008867EF /* TimerComponent.swift in Sources */,
 				1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */,
 				1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */,
 				1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */,

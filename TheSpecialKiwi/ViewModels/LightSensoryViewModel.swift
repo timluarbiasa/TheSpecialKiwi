@@ -7,64 +7,54 @@
 
 import SwiftUI
 
+import SwiftUI
+
 class LightSensoryViewModel: ObservableObject {
     @Published var rectangleWidth: CGFloat
     @Published var characterWidth: CGFloat = 75
-    @Published var timeRemaining: Int = 10
     @Published var gameOver: Bool = false
     @Published var didWin: Bool = false
-    @Published var progress: CGFloat = 1.0
     @Published var showKiwiHappy: Bool = false
     
     let screenWidth: CGFloat
-    private var timer: Timer?
-    
-    init(screenWidth: CGFloat) {
+    private var timerHelper: TimerHelper
+
+    init(screenWidth: CGFloat, timerHelper: TimerHelper) {
         self.screenWidth = screenWidth
-        self.rectangleWidth = screenWidth * 0.1 // Initialize rectangleWidth to 10% of the screen width
-    }
-    
-    func startTimer() {
-        timer?.invalidate() // Invalidate any existing timer
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+        self.rectangleWidth = screenWidth * 0.1
+        self.timerHelper = timerHelper
+        
+        // Set up the callback for when the timer ends
+        self.timerHelper.onTimerEnd = { [weak self] in
             guard let self = self else { return }
-            if self.timeRemaining > 0 {
-                self.timeRemaining -= 1
-                self.progress = CGFloat(self.timeRemaining) / 10.0
-            } else {
-                self.didWin = false
-                self.endGame()
-            }
+            self.didWin = false
+            self.endGame() // Mark the game as lost
         }
     }
-    
+
     func endGame() {
-        timer?.invalidate()
-        timer = nil
+        timerHelper.stopTimer() // Stop the timer when the game ends
         gameOver = true
     }
-    
+
     func resetGame() {
         rectangleWidth = screenWidth * 0.1
-        timeRemaining = 10
         gameOver = false
         didWin = false
         showKiwiHappy = false
-        startTimer()
+        timerHelper.resetTimer() // Reset the timer when the game resets
     }
-    
+
     func handleSwipe() {
         let increment = screenWidth / 10.0
-        if rectangleWidth >= screenWidth - increment{
+        if rectangleWidth >= screenWidth * 0.8 - increment {
             showKiwiHappy = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.transitionToWin()
             }
-            //print("DEBUG: Masuk sini!")
-            //print("DEBUG: rectangleWidth: \(rectangleWidth) || screenWidth: \(screenWidth)")
         }
         
-        if rectangleWidth >= screenWidth {
+        if rectangleWidth >= screenWidth * 0.8 {
             rectangleWidth = screenWidth
             didWin = true
             endGame()
