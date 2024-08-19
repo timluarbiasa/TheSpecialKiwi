@@ -46,15 +46,15 @@ class LightSensoryViewModel: ObservableObject {
     }
 
     func handleSwipe() {
-        let increment = screenWidth / 10.0
-        if rectangleWidth >= screenWidth * 0.8 - increment {
+        let increment = screenWidth / 30.0 // 10, 20, 30
+        if rectangleWidth >= screenWidth * 0.75 - increment {
             showKiwiHappy = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.transitionToWin()
             }
         }
         
-        if rectangleWidth >= screenWidth * 0.8 {
+        if rectangleWidth >= screenWidth * 0.75 {
             rectangleWidth = screenWidth
             didWin = true
             endGame()

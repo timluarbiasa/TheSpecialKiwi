@@ -12,6 +12,7 @@ enum Game {
     case communication
     case eyeContact
     case lightSensory
+    case informationGame
 }
 
 class NavigationViewModel: ObservableObject {

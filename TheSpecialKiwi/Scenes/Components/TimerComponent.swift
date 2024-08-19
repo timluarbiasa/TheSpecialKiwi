@@ -20,7 +20,7 @@ struct TimerComponent: View {
                     
                     Rectangle()
                         .fill(Color.brown.opacity(1.0))
-                        .frame(width: geometry.size.width * timerHelper.progress, height: 12)
+                        .frame(width: abs(geometry.size.width * timerHelper.progress), height: 12)
                         .animation(.linear(duration: 1), value: timerHelper.progress)
                 }
             }

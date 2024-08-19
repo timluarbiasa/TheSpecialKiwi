@@ -40,21 +40,19 @@ struct CommunicationGameView: View {
                 }
                 
                 if viewModel.hasWon {
-                    NavigationLink(
-                        destination: EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: CGRect(x: 0, y: 0, width: 300, height: 300))),
-                        isActive: $navigateToEyeContact
-                    ) {
-                        Button(action: {
-                            navigateToEyeContact = true
-                        }) {
-                            Text("Go to Eye Contact Stage")
-                                .font(.title)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .padding()
+                    Button(action: {
+                        navigateToEyeContact = true
+                    }) {
+                        Text("Go to Eye Contact Stage")
+                            .font(.title)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding()
+                    .navigationDestination(isPresented: $navigateToEyeContact) {
+                        EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: CGRect(x: 0, y: 0, width: 300, height: 300)))
                     }
                 }
             }
