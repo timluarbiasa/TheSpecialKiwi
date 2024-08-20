@@ -9,11 +9,19 @@ import SwiftUI
 import Lottie
 
 struct SoundView: View {
-    @StateObject var viewModel = SoundViewModel()
+    @StateObject var viewModel: SoundViewModel
     @StateObject var timerHelper = TimerHelper(totalTime: 10) // 10 seconds for demonstration
     
     @State private var navigateToGameOver = false
     @State private var navigateToCommunicationGame = false
+    
+    init() {
+        let timerHelperInstance = TimerHelper(totalTime: 10)
+        
+        _viewModel = StateObject(wrappedValue: SoundViewModel())
+        
+        _timerHelper = StateObject(wrappedValue: timerHelperInstance)
+    }
 
     var body: some View {
         GeometryReader { geometry in
@@ -86,14 +94,20 @@ struct SoundView: View {
                 
                 .onChange(of: viewModel.gameOver) { gameOver in
                     if gameOver {
+                        viewModel.stopSound()
                         if viewModel.didWin {
                             navigateToCommunicationGame = true
                         } else {
+                            viewModel.stopSound()
                             navigateToGameOver = true
                         }
                     }
                 }
             }
+        }
+        .onDisappear {
+            viewModel.stopSound()
+            viewModel.endGame()
         }
     }
 

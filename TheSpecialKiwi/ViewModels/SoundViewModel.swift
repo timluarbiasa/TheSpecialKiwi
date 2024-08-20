@@ -1,10 +1,3 @@
-//
-//  SoundViewModel.swift
-//  TheSpecialKiwi
-//
-//  Created by Justin Jefferson on 20/08/24.
-//
-
 import SwiftUI
 import Combine
 import AVFoundation
@@ -15,15 +8,26 @@ class SoundViewModel: ObservableObject {
     @Published var gameOver: Bool = false
     @Published var didWin: Bool = false
 
+    private var timer: Timer?
     private var randomizedLottieAnimations: [String] = []
     private var interactionOrder: [Int] = []
     private var currentActiveIndex: Int = 0
     private var successfulHolds: Int = 0
-    private var timer: AnyCancellable?
     private var audioPlayer: AVAudioPlayer?
+    private var stopTime: AnyCancellable?
 
     init() {
         startGame()
+        startTimer()
+    }
+
+    private func startTimer() {
+        // Start a timer that triggers after 10 seconds
+        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
+            guard let self = self else { return }
+            self.didWin = false
+            self.endGame() // Mark the game as lost
+        }
     }
 
     func startGame() {
@@ -36,6 +40,14 @@ class SoundViewModel: ObservableObject {
         currentActiveIndex = 0
         successfulHolds = 0
         activateNextFruit()
+        print("Start")
+    }
+    
+    func endGame() {
+        timer?.invalidate() // Stop the timer when the game ends
+        gameOver = true
+        stopSound()
+        print("ended")
     }
 
     private func resetSounds() {
@@ -56,9 +68,9 @@ class SoundViewModel: ObservableObject {
         // Play sound corresponding to the fruit
         playSound(for: index)
 
-        timer = Just(())
+        stopTime = Just(())
             .delay(for: .seconds(2), scheduler: RunLoop.main)
-            .sink { [weak self] in
+            .sink { [ weak self ] in
                 self?.moveToNextFruit()
             }
     }
@@ -87,7 +99,8 @@ class SoundViewModel: ObservableObject {
         sounds[index].isRed = false
         successfulHolds += 1
         
-        timer?.cancel()
+        // Cancel any ongoing timer
+        stopTime?.cancel()
 
         if successfulHolds >= 4 {
             kiwiSuccess = true
@@ -112,7 +125,7 @@ class SoundViewModel: ObservableObject {
         }
     }
 
-    private func stopSound() {
+    func stopSound() {
         audioPlayer?.stop() // Stop the currently playing sound
     }
 
