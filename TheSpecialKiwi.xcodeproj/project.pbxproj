@@ -28,6 +28,20 @@
 		1A469B282C744CDA0065336D /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B262C744CDA0065336D /* KiwiLight.json */; };
 		1A469B2A2C744EF30065336D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B292C744EF30065336D /* SDWebImageSwiftUI */; };
 		1A469B2C2C744EFD0065336D /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B2B2C744EFD0065336D /* SDWebImageLottieCoder */; };
+		1A469B592C745B830065336D /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B582C745B830065336D /* SoundViewModel.swift */; };
+		1A469B5B2C745C1E0065336D /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5A2C745C1E0065336D /* SoundModel.swift */; };
+		1A469B5F2C745C410065336D /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5D2C745C410065336D /* SoundView.swift */; };
+		1A469B602C745C410065336D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5E2C745C410065336D /* LottieView.swift */; };
+		1A469B682C745C5B0065336D /* Fruit4-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B632C745C5B0065336D /* Fruit4-2.json */; };
+		1A469B692C745C5B0065336D /* Kiwi.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B642C745C5B0065336D /* Kiwi.json */; };
+		1A469B6A2C745C5B0065336D /* Fruit1-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B652C745C5B0065336D /* Fruit1-2.json */; };
+		1A469B6B2C745C5B0065336D /* Fruit3-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B662C745C5B0065336D /* Fruit3-2.json */; };
+		1A469B6C2C745C5B0065336D /* Fruit2-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B672C745C5B0065336D /* Fruit2-2.json */; };
+		1A469B712C745C640065336D /* Fruit1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B6D2C745C640065336D /* Fruit1.mp3 */; };
+		1A469B722C745C640065336D /* Fruit4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B6E2C745C640065336D /* Fruit4.mp3 */; };
+		1A469B732C745C640065336D /* Fruit3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B6F2C745C640065336D /* Fruit3.mp3 */; };
+		1A469B742C745C640065336D /* Fruit2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B702C745C640065336D /* Fruit2.mp3 */; };
+		1A469B772C745EB30065336D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B762C745EB30065336D /* Lottie */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -82,6 +96,19 @@
 		1A469B1A2C74488E0065336D /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		1A469B252C744CDA0065336D /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy.json; sourceTree = "<group>"; };
 		1A469B262C744CDA0065336D /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
+		1A469B582C745B830065336D /* SoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
+		1A469B5A2C745C1E0065336D /* SoundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
+		1A469B5D2C745C410065336D /* SoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		1A469B5E2C745C410065336D /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1A469B632C745C5B0065336D /* Fruit4-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit4-2.json"; sourceTree = "<group>"; };
+		1A469B642C745C5B0065336D /* Kiwi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kiwi.json; sourceTree = "<group>"; };
+		1A469B652C745C5B0065336D /* Fruit1-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit1-2.json"; sourceTree = "<group>"; };
+		1A469B662C745C5B0065336D /* Fruit3-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit3-2.json"; sourceTree = "<group>"; };
+		1A469B672C745C5B0065336D /* Fruit2-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit2-2.json"; sourceTree = "<group>"; };
+		1A469B6D2C745C640065336D /* Fruit1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fruit1.mp3; sourceTree = "<group>"; };
+		1A469B6E2C745C640065336D /* Fruit4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fruit4.mp3; sourceTree = "<group>"; };
+		1A469B6F2C745C640065336D /* Fruit3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fruit3.mp3; sourceTree = "<group>"; };
+		1A469B702C745C640065336D /* Fruit2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fruit2.mp3; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +134,7 @@
 			files = (
 				1A469B2A2C744EF30065336D /* SDWebImageSwiftUI in Frameworks */,
 				1A469B2C2C744EFD0065336D /* SDWebImageLottieCoder in Frameworks */,
+				1A469B772C745EB30065336D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +174,7 @@
 				1A469AF02C7441AB0065336D /* GameOverViewModel.swift */,
 				1A469AF52C7442700065336D /* EyeContactStageViewModel.swift */,
 				1A469B002C7443BB0065336D /* LightSensoryViewModel.swift */,
+				1A469B582C745B830065336D /* SoundViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +212,40 @@
 				1A469B262C744CDA0065336D /* KiwiLight.json */,
 			);
 			path = LightSensoryStage;
+			sourceTree = "<group>";
+		};
+		1A469B5C2C745C310065336D /* SoundStage */ = {
+			isa = PBXGroup;
+			children = (
+				1A469B622C745C4E0065336D /* SoundMusics */,
+				1A469B612C745C460065336D /* SoundLottie */,
+				1A469B5E2C745C410065336D /* LottieView.swift */,
+				1A469B5D2C745C410065336D /* SoundView.swift */,
+			);
+			path = SoundStage;
+			sourceTree = "<group>";
+		};
+		1A469B612C745C460065336D /* SoundLottie */ = {
+			isa = PBXGroup;
+			children = (
+				1A469B652C745C5B0065336D /* Fruit1-2.json */,
+				1A469B672C745C5B0065336D /* Fruit2-2.json */,
+				1A469B662C745C5B0065336D /* Fruit3-2.json */,
+				1A469B632C745C5B0065336D /* Fruit4-2.json */,
+				1A469B642C745C5B0065336D /* Kiwi.json */,
+			);
+			path = SoundLottie;
+			sourceTree = "<group>";
+		};
+		1A469B622C745C4E0065336D /* SoundMusics */ = {
+			isa = PBXGroup;
+			children = (
+				1A469B6D2C745C640065336D /* Fruit1.mp3 */,
+				1A469B702C745C640065336D /* Fruit2.mp3 */,
+				1A469B6F2C745C640065336D /* Fruit3.mp3 */,
+				1A469B6E2C745C640065336D /* Fruit4.mp3 */,
+			);
+			path = SoundMusics;
 			sourceTree = "<group>";
 		};
 		44138A262C6B4AEC005E5FAD = {
@@ -251,6 +314,7 @@
 		44138A5F2C6B4E43005E5FAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A469B5A2C745C1E0065336D /* SoundModel.swift */,
 				1A469AF72C74428B0065336D /* EyeContactButtonModel.swift */,
 				1A469AEC2C7441390065336D /* ArrowModel.swift */,
 				1A469AED2C7441390065336D /* GaugeModel.swift */,
@@ -263,6 +327,7 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A469B5C2C745C310065336D /* SoundStage */,
 				1A469B022C7443C50065336D /* LightSensoryStage */,
 				1A469AF22C7441B00065336D /* Game Over Screen */,
 				1A469AE72C7440E50065336D /* CommunicationStage */,
@@ -325,6 +390,7 @@
 			packageProductDependencies = (
 				1A469B292C744EF30065336D /* SDWebImageSwiftUI */,
 				1A469B2B2C744EFD0065336D /* SDWebImageLottieCoder */,
+				1A469B762C745EB30065336D /* Lottie */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -401,6 +467,7 @@
 			packageReferences = (
 				1A469B0B2C74440A0065336D /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
 				1A469B102C7444D00065336D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 44138A302C6B4AEC005E5FAD /* Products */;
 			projectDirPath = "";
@@ -418,10 +485,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A469B6C2C745C5B0065336D /* Fruit2-2.json in Resources */,
+				1A469B732C745C640065336D /* Fruit3.mp3 in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
+				1A469B6B2C745C5B0065336D /* Fruit3-2.json in Resources */,
+				1A469B712C745C640065336D /* Fruit1.mp3 in Resources */,
+				1A469B6A2C745C5B0065336D /* Fruit1-2.json in Resources */,
+				1A469B742C745C640065336D /* Fruit2.mp3 in Resources */,
 				1A469B272C744CDA0065336D /* KiwiHappy.json in Resources */,
 				1A469B282C744CDA0065336D /* KiwiLight.json in Resources */,
+				1A469B682C745C5B0065336D /* Fruit4-2.json in Resources */,
+				1A469B722C745C640065336D /* Fruit4.mp3 in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
+				1A469B692C745C5B0065336D /* Kiwi.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +522,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A469B602C745C410065336D /* LottieView.swift in Sources */,
+				1A469B5B2C745C1E0065336D /* SoundModel.swift in Sources */,
 				44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */,
 				1A469AE22C74409A0065336D /* NavigationView.swift in Sources */,
 				44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */,
@@ -455,6 +533,7 @@
 				1A469AF12C7441AB0065336D /* GameOverViewModel.swift in Sources */,
 				1A469AF42C7441CC0065336D /* GameOverView.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
+				1A469B5F2C745C410065336D /* SoundView.swift in Sources */,
 				1A469B1B2C74488E0065336D /* InformationView.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				1A469AF62C7442700065336D /* EyeContactStageViewModel.swift in Sources */,
@@ -466,6 +545,7 @@
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
 				1A469B1C2C74488E0065336D /* InformationViewController.swift in Sources */,
+				1A469B592C745B830065336D /* SoundViewModel.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
 				1A469AEF2C7441390065336D /* GaugeModel.swift in Sources */,
@@ -816,6 +896,14 @@
 				minimumVersion = 3.1.1;
 			};
 		};
+		1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -828,6 +916,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B0B2C74440A0065336D /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
 			productName = SDWebImageLottieCoder;
+		};
+		1A469B762C745EB30065336D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
