@@ -15,6 +15,7 @@ class CommunicationGameViewModel: ObservableObject {
     @Published var resultMessage: String = ""
     @Published var isRunning: Bool = false
     @Published var hasWon: Bool = false
+    @Published var hasLost: Bool = false
     
     private var timer: Timer?
     
@@ -27,6 +28,7 @@ class CommunicationGameViewModel: ObservableObject {
         isRunning = true
         resultMessage = ""
         hasWon = false
+        hasLost = false
         timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] _ in self?.updateArrowPosition()
         }
     }
@@ -46,11 +48,13 @@ class CommunicationGameViewModel: ObservableObject {
         let result = gauge.checkResult(arrowPosition: arrow.position)
         resultMessage = result
         hasWon = result == "You Win!"
+        hasLost = result == "You Lose!"
     }
     
     func resetArrow() {
         arrow.resetPosition()
         resultMessage = ""
         hasWon = false
+        hasLost = false
     }
 }

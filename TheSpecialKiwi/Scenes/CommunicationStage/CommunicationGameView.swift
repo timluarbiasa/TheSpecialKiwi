@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
-    @State private var navigateToEyeContact = false 
+    @State private var navigateToEyeContact = false
+    @State private var navigateToGameOver = false
 
     var body: some View {
         NavigationStack {
@@ -55,6 +56,19 @@ struct CommunicationGameView: View {
                                 .cornerRadius(10)
                         }
                         .padding()
+                    }
+                }
+                
+                if viewModel.hasLost {
+                    NavigationLink(
+                        destination: GameOverView(viewModel: GameOverViewModel()),
+                        isActive: $navigateToGameOver
+                    ) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    .onAppear {
+                        navigateToGameOver = true
                     }
                 }
             }

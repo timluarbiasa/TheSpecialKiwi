@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A067E7F2C730EC5003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E7E2C730EC5003017E5 /* ColorExtension.swift */; };
 		1A067E822C731466003017E5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A067E812C731466003017E5 /* SDWebImageLottieCoder */; };
+		1A469AC92C7431EE0065336D /* GameOverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469AC82C7431EE0065336D /* GameOverViewModel.swift */; };
+		1A469ACC2C7432560065336D /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469ACB2C7432560065336D /* GameOverView.swift */; };
 		1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */; };
 		1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */; };
 		1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		1A067E7E2C730EC5003017E5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		1A469AC82C7431EE0065336D /* GameOverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewModel.swift; sourceTree = "<group>"; };
+		1A469ACB2C7432560065336D /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowModel.swift; sourceTree = "<group>"; };
 		1A59E92D2C6C47F100D61FE0 /* GaugeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeModel.swift; sourceTree = "<group>"; };
 		1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameViewModel.swift; sourceTree = "<group>"; };
@@ -111,12 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A469ACA2C7432450065336D /* Game Over */ = {
+			isa = PBXGroup;
+			children = (
+				1A469ACB2C7432560065336D /* GameOverView.swift */,
+			);
+			path = "Game Over";
+			sourceTree = "<group>";
+		};
 		1A59E92F2C6C488300D61FE0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */,
 				1A59E9552C6C71FC00D61FE0 /* EyeContactStageViewModel.swift */,
 				1A59E9592C6C724600D61FE0 /* NavigationViewModel.swift */,
+				1A469AC82C7431EE0065336D /* GameOverViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A469ACA2C7432450065336D /* Game Over */,
 				1A59E95C2C6C725B00D61FE0 /* Main Menu */,
 				1A59E9322C6C4A7800D61FE0 /* CommunicationStage */,
 				44138A632C6B4E9B005E5FAD /* EyeContactStage */,
@@ -407,12 +421,14 @@
 				1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */,
 				1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */,
 				1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */,
+				1A469ACC2C7432560065336D /* GameOverView.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
 				1A59E95D2C6C725B00D61FE0 /* NavigationView.swift in Sources */,
 				1A59E9312C6C48B200D61FE0 /* CommunicationGameViewModel.swift in Sources */,
 				1A59E9342C6C4A9400D61FE0 /* CommunicationGameView.swift in Sources */,
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
+				1A469AC92C7431EE0065336D /* GameOverViewModel.swift in Sources */,
 				1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */,
 				1A067E7F2C730EC5003017E5 /* ColorExtension.swift in Sources */,
 			);
