@@ -9,6 +9,12 @@
 <rect x="282" width="194" height="26" transform="rotate(90 282 0)" fill="#CCB05B"/>
 <rect x="595" width="194" height="26" transform="rotate(90 595 0)" fill="#CCB05B"/>
 <rect y="186" width="852" height="11" fill="#C4A853"/>
+<rect x="595" width="257" height="293" fill="#FBEAB6"/>
+<path d="M595 182C595 195.6 583.5 197 578 197H595V182Z" fill="#FBEAB6"/>
+<rect x="657" y="65" width="208" height="229" rx="5" fill="#E3C772"/>
+<rect x="679" y="85" width="186" height="209" rx="5" fill="#C4A853"/>
+<rect x="673" y="150" width="179" height="17" fill="#E3C772"/>
+<rect x="673" y="220" width="179" height="17" fill="#E3C772"/>
 <rect width="852" height="204" fill="url(#paint0_linear_194_226)" fill-opacity="0.9"/>
 </g>
 <defs>
