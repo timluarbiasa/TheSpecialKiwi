@@ -54,6 +54,11 @@
 		F156BCEB2C744D4000EB43C5 /* Fruit3-2.json in Resources */ = {isa = PBXBuildFile; fileRef = F156BCEA2C744D4000EB43C5 /* Fruit3-2.json */; };
 		F156BCED2C744D4600EB43C5 /* Fruit4-2.json in Resources */ = {isa = PBXBuildFile; fileRef = F156BCEC2C744D4600EB43C5 /* Fruit4-2.json */; };
 		F156BCEF2C744DA400EB43C5 /* Kiwi.json in Resources */ = {isa = PBXBuildFile; fileRef = F156BCEE2C744DA400EB43C5 /* Kiwi.json */; };
+		F156BCFD2C75267F00EB43C5 /* OverlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156BCFC2C75267E00EB43C5 /* OverlayModel.swift */; };
+		F156BD002C7526B600EB43C5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156BCFF2C7526B600EB43C5 /* OverlayView.swift */; };
+		F156BD022C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F156BD012C75279800EB43C5 /* LilitaOne-Regular.ttf */; };
+		F156BD032C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F156BD012C75279800EB43C5 /* LilitaOne-Regular.ttf */; };
+		F156BD042C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F156BD012C75279800EB43C5 /* LilitaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +128,9 @@
 		F156BCEA2C744D4000EB43C5 /* Fruit3-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit3-2.json"; sourceTree = "<group>"; };
 		F156BCEC2C744D4600EB43C5 /* Fruit4-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fruit4-2.json"; sourceTree = "<group>"; };
 		F156BCEE2C744DA400EB43C5 /* Kiwi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kiwi.json; sourceTree = "<group>"; };
+		F156BCFC2C75267E00EB43C5 /* OverlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayModel.swift; sourceTree = "<group>"; };
+		F156BCFF2C7526B600EB43C5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		F156BD012C75279800EB43C5 /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +266,7 @@
 				1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */,
 				1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */,
 				F156BCD52C744B8C00EB43C5 /* SoundModel.swift */,
+				F156BCFC2C75267E00EB43C5 /* OverlayModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 		44138A612C6B4E71005E5FAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F156BCFE2C75269B00EB43C5 /* Overlay */,
 				F156BCCE2C744B0500EB43C5 /* SoundStage */,
 				EF96E2222C6CA01D001C019A /* LightSensoryStage */,
 				1A59E95C2C6C725B00D61FE0 /* Main Menu */,
@@ -311,6 +321,7 @@
 		EF78F1792C73C99F008867EF /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				F156BD012C75279800EB43C5 /* LilitaOne-Regular.ttf */,
 				EF78F17B2C73C9EA008867EF /* Sora.ttf */,
 			);
 			path = Font;
@@ -358,6 +369,14 @@
 				F156BCEE2C744DA400EB43C5 /* Kiwi.json */,
 			);
 			path = SoundLottie;
+			sourceTree = "<group>";
+		};
+		F156BCFE2C75269B00EB43C5 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				F156BCFF2C7526B600EB43C5 /* OverlayView.swift */,
+			);
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +506,7 @@
 				F156BCEB2C744D4000EB43C5 /* Fruit3-2.json in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
 				F156BCE92C744D3B00EB43C5 /* Fruit1-2.json in Resources */,
+				F156BD022C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F156BD032C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F156BD042C75279800EB43C5 /* LilitaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +542,7 @@
 				1A59E9562C6C71FC00D61FE0 /* EyeContactStageViewModel.swift in Sources */,
 				F156BCD42C744B7300EB43C5 /* SoundViewModel.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
+				F156BD002C7526B600EB43C5 /* OverlayView.swift in Sources */,
 				1A59E92E2C6C47F100D61FE0 /* GaugeModel.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				EF78F1782C73B7C9008867EF /* InformationView.swift in Sources */,
@@ -538,6 +561,7 @@
 				44138A652C6B4F92005E5FAD /* EyeContactStageView.swift in Sources */,
 				F156BCD62C744B8C00EB43C5 /* SoundModel.swift in Sources */,
 				44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */,
+				F156BCFD2C75267F00EB43C5 /* OverlayModel.swift in Sources */,
 				1A59E9582C6C720A00D61FE0 /* EyeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,7 +726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = K8BGRYNNM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheSpecialKiwi/Info.plist;
@@ -731,7 +755,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = K8BGRYNNM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheSpecialKiwi/Info.plist;

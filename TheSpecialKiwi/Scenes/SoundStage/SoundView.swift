@@ -10,7 +10,6 @@ import Lottie
 
 struct SoundView: View {
     @StateObject var viewModel = SoundViewModel()
-    @StateObject var timerHelper = TimerHelper(totalTime: 10) // 10 seconds for demonstration
 
     var body: some View {
         GeometryReader { geometry in
@@ -59,12 +58,9 @@ struct SoundView: View {
                         .position(fruitPosition(index: index, geometry: geometry))
                 }
 
-                // Add the TimerComponent to the view
-                TimerComponent(timerHelper: timerHelper)
+                // Add the TimerComponent to the view (if needed for visual representation)
+                TimerComponent(timerHelper: TimerHelper(totalTime: 10)) // Example placeholder
                     .position(x: geometry.size.width / 2, y: geometry.size.height * 0.021)
-                    .onAppear {
-                        timerHelper.startTimer()
-                    }
             }
         }
     }
@@ -84,4 +80,5 @@ struct SoundView: View {
     SoundView()
         .previewInterfaceOrientation(.landscapeLeft)
 }
+
 
