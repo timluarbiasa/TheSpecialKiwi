@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
-    @State private var navigateToEyeContact = false
+    @State private var navigateToLightSensory = false
     @State private var navigateToGameOver = false
 
     var body: some View {
@@ -42,13 +42,13 @@ struct CommunicationGameView: View {
                 
                 if viewModel.hasWon {
                     NavigationLink(
-                        destination: EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: CGRect(x: 0, y: 0, width: 300, height: 300))),
-                        isActive: $navigateToEyeContact
+                        destination: LightSensoryView().navigationBarBackButtonHidden(),
+                        isActive: $navigateToLightSensory
                     ) {
                         Button(action: {
-                            navigateToEyeContact = true
+                            navigateToLightSensory = true
                         }) {
-                            Text("Go to Eye Contact Stage")
+                            Text("Go to Light Sensory Stage")
                                 .font(.title)
                                 .padding()
                                 .background(Color.blue)
