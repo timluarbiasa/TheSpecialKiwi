@@ -37,9 +37,14 @@ class InformationViewController: UIViewController {
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.9)
         ])
+        
+        // Add a green border (stroke) to the imageView
+        imageView.layer.borderColor = UIColor(named: "ColorBackgroundAccents")?.cgColor
+        imageView.layer.borderWidth = 4.0
+        imageView.layer.cornerRadius = 10.0
         
         // Create a UIImageView
         let informationHeader = UIImageView()
