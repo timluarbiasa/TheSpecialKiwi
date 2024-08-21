@@ -52,9 +52,9 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
-		EF31990C2C7588C8004A81A5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990B2C7588C8004A81A5 /* Lottie */; };
-		EF31990E2C7588D8004A81A5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */; };
-		EF3199102C7588EC004A81A5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */; };
+		EF3199122C7592EB004A81A5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF3199112C7592EB004A81A5 /* SDWebImageLottieCoder */; };
+		EF3199142C7592F7004A81A5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF3199132C7592F7004A81A5 /* SDWebImageSwiftUI */; };
+		EF3199162C759306004A81A5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EF3199152C759306004A81A5 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,9 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF31990E2C7588D8004A81A5 /* SDWebImageSwiftUI in Frameworks */,
-				EF3199102C7588EC004A81A5 /* SDWebImageLottieCoder in Frameworks */,
-				EF31990C2C7588C8004A81A5 /* Lottie in Frameworks */,
+				EF3199142C7592F7004A81A5 /* SDWebImageSwiftUI in Frameworks */,
+				EF3199122C7592EB004A81A5 /* SDWebImageLottieCoder in Frameworks */,
+				EF3199162C759306004A81A5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +388,9 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				EF31990B2C7588C8004A81A5 /* Lottie */,
-				EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */,
-				EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */,
+				EF3199112C7592EB004A81A5 /* SDWebImageLottieCoder */,
+				EF3199132C7592F7004A81A5 /* SDWebImageSwiftUI */,
+				EF3199152C759306004A81A5 /* Lottie */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -907,19 +907,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EF31990B2C7588C8004A81A5 /* Lottie */ = {
+		EF3199112C7592EB004A81A5 /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Lottie;
+			package = 1A469B0B2C74440A0065336D /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
 		};
-		EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */ = {
+		EF3199132C7592F7004A81A5 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B102C7444D00065336D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
-		EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */ = {
+		EF3199152C759306004A81A5 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1A469B0B2C74440A0065336D /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
-			productName = SDWebImageLottieCoder;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
