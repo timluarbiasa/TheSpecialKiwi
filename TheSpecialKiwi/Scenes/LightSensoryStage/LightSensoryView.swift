@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
-import SDWebImageLottieCoder
 import Lottie
 
 struct LightSensoryView: View {
