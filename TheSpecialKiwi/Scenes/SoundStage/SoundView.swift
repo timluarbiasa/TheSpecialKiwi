@@ -57,7 +57,6 @@ struct SoundView: View {
                         )
                         .position(fruitPosition(index: index, geometry: geometry))
                 }
-
                 TimerComponent(timerHelper: TimerHelper(totalTime: 10))
                     .position(x: geometry.size.width / 2, y: geometry.size.height * 0.021)
             }

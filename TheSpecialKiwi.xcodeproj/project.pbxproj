@@ -39,6 +39,7 @@
 		EF78F1782C73B7C9008867EF /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78F1772C73B7C9008867EF /* InformationView.swift */; };
 		EF96E2212C6C9F3E001C019A /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */; };
 		EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E2232C6CA03A001C019A /* LightSensoryView.swift */; };
+		F11D24322C75BAA000DC5FD4 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D24312C75BAA000DC5FD4 /* ScoreModel.swift */; };
 		F156BCD02C744B1E00EB43C5 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156BCCF2C744B1E00EB43C5 /* SoundView.swift */; };
 		F156BCD22C744B5600EB43C5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156BCD12C744B5600EB43C5 /* LottieView.swift */; };
 		F156BCD42C744B7300EB43C5 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156BCD32C744B7300EB43C5 /* SoundViewModel.swift */; };
@@ -114,6 +115,7 @@
 		EF78F17C2C73CA0C008867EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF96E2202C6C9F3E001C019A /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
 		EF96E2232C6CA03A001C019A /* LightSensoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
+		F11D24312C75BAA000DC5FD4 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		F156BCCF2C744B1E00EB43C5 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		F156BCD12C744B5600EB43C5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		F156BCD32C744B7300EB43C5 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */,
 				F156BCD52C744B8C00EB43C5 /* SoundModel.swift */,
 				F156BCFC2C75267E00EB43C5 /* OverlayModel.swift */,
+				F11D24312C75BAA000DC5FD4 /* ScoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				EF78F1782C73B7C9008867EF /* InformationView.swift in Sources */,
 				1A59E95A2C6C724600D61FE0 /* NavigationViewModel.swift in Sources */,
+				F11D24322C75BAA000DC5FD4 /* ScoreModel.swift in Sources */,
 				EF96E2242C6CA03A001C019A /* LightSensoryView.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
 				EF78F1452C72F71C008867EF /* TimerComponent.swift in Sources */,

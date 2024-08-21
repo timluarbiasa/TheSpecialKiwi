@@ -96,7 +96,7 @@ class SoundViewModel: ObservableObject {
     }
 
     private func playSound(for index: Int) {
-        let soundName = "Fruit\(index + 1)" // Corresponding sound file name
+        let soundName = "Fruit\(index + 1)"
         if let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)

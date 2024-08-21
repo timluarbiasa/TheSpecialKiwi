@@ -9,7 +9,8 @@ import SwiftUI
 
 struct OverlayView: View {
     @ObservedObject var viewModel: OverlayModel
-    
+    var onTapContinue: () -> Void // Closure to handle tap event
+
     var body: some View {
         ZStack {
             Color("ColorSecondary")
@@ -66,12 +67,12 @@ struct OverlayView: View {
                 }
                 
                 HStack(spacing: 5) {
-                    Text("HOLD")
+                    Text("TAP")
                         .font(.custom("Lilita One", size: 16))
                         .foregroundColor(viewModel.descriptionColor)
                     Image(systemName: "hand.tap.fill")
                         .foregroundColor(viewModel.descriptionColor)
-                    Text("TO PAUSE THE SCREEN")
+                    Text("TO CONTINUE")
                         .font(.custom("Lilita One", size: 16))
                         .foregroundColor(viewModel.descriptionColor)
                 }
@@ -81,6 +82,9 @@ struct OverlayView: View {
         }
         .onAppear {
             lockOrientationLandscape()
+        }
+        .onTapGesture {
+            onTapContinue() // Trigger the closure to move to the game view
         }
     }
     
@@ -107,22 +111,22 @@ struct OverlayView: View {
     }
     
     private func lockOrientationLandscape() {
-            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-            
-            // Use the updated method for iOS 16 and later
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeLeft))
-            } else {
-                // Fallback for older iOS versions
-                UINavigationController().setNeedsUpdateOfSupportedInterfaceOrientations()
-            }
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+        
+        // Use the updated method for iOS 16 and later
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeLeft))
+        } else {
+            // Fallback for older iOS versions
+            UINavigationController().setNeedsUpdateOfSupportedInterfaceOrientations()
         }
     }
+}
 
 // MARK: - Preview
 struct StageOverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(viewModel: previewViewModel())
+        OverlayView(viewModel: previewViewModel(), onTapContinue: {})
     }
     
     static func previewViewModel() -> OverlayModel {
