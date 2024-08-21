@@ -34,8 +34,13 @@ struct CommunicationGameView: View {
                         .frame(width: 860, height: 860)
                         .padding()
                         .zIndex(10)
-                        .offset(x: 30, y: 0)  // Adjust to position the image as desired
+                        .offset(x: 5, y: -20)  // Adjust to position the image as desired
                         .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                navigateToLightSensory = true
+                            }
+                        }
                 }
                 
                 VStack(spacing: 0) {
@@ -70,17 +75,7 @@ struct CommunicationGameView: View {
                         destination: LightSensoryView().navigationBarBackButtonHidden(),
                         isActive: $navigateToLightSensory
                     ) {
-                        Button(action: {
-                            navigateToLightSensory = true
-                        }) {
-                            Text("Go to Light Sensory Stage")
-                                .font(.title)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .padding()
+                        EmptyView()
                     }
                 }
                 

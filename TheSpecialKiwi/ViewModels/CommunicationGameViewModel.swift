@@ -65,12 +65,14 @@ class CommunicationGameViewModel: ObservableObject {
     }
     
     private func checkResult() {
+        print("Checking result")
         let result = gauge.checkResult(arrowPosition: arrow.position)
         resultMessage = result
         if result == "KiwiHappy" {
             kiwiSuccess = true
+            hasWon = true
         }
-        hasWon = result == "You Win!"
+        hasWon = result == "KiwiHappy"
         hasLost = result == "You Lose!"
     }
     
