@@ -56,7 +56,7 @@ struct LightSensoryView: View {
                                 
                                 
                                 if viewModel.showKiwiHappy {
-                                    LottieView(name: "KiwiHappy", shouldPlay: .constant(true))
+                                    LottieView(name: "KiwiHappy1", shouldPlay: .constant(true))
                                 } else {
                                     LottieView(name: "KiwiLight", shouldPlay: .constant(true))
                                 }
