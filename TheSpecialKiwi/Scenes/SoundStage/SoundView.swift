@@ -15,6 +15,10 @@ struct SoundView: View {
     @State private var navigateToGameOver = false
     @State private var navigateToCommunicationGame = false
     
+    // New state to manage overlay visibility
+    @State private var showOverlay = true
+    @ObservedObject var overlayViewModel = OverlayModel() // Overlay view model
+
     init() {
         let timerHelperInstance = TimerHelper(totalTime: 10)
         
@@ -26,84 +30,94 @@ struct SoundView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("BG-2")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-
-                if viewModel.kiwiSuccess {
-                    Image("Kiwi%20Success")
-                        .resizable()
-                        .scaledToFit()
-                        .position(x: geometry.size.width / 2, y: geometry.size.height - 165)
+                if showOverlay {
+                    OverlayView(viewModel: overlayViewModel) {
+                        showOverlay = false // Hide overlay and show the game view
+                    }
                 } else {
-                    LottieView(name: "Kiwi", loopMode: .loop, shouldPlay: .constant(true))
-                        .position(x: geometry.size.width / 2, y: geometry.size.height - 165)
-                }
+                    Image("BG-2")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
 
-                ForEach(0..<4) { index in
-                    VStack {
-                        if viewModel.sounds[index].isRed {
-                            LottieView(name: "Fruit\(index + 1)-2", loopMode: .playOnce, shouldPlay: .constant(true))
-                                .frame(width: geometry.size.width * 0.69, height: geometry.size.height * 0.69)
-                        } else {
-                            Image("Fruit\(index + 1)%20Success-3")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.6)
+                    if viewModel.kiwiSuccess {
+                        Image("Kiwi%20Success")
+                            .resizable()
+                            .scaledToFit()
+                            .position(x: geometry.size.width / 2, y: geometry.size.height - 165)
+                    } else {
+                        LottieView(name: "Kiwi", loopMode: .loop, shouldPlay: .constant(true))
+                            .position(x: geometry.size.width / 2, y: geometry.size.height - 165)
+                    }
+
+                    ForEach(0..<4) { index in
+                        VStack {
+                            if viewModel.sounds[index].isRed {
+                                LottieView(name: "Fruit\(index + 1)-2", loopMode: .playOnce, shouldPlay: .constant(true))
+                                    .frame(width: geometry.size.width * 0.69, height: geometry.size.height * 0.69)
+                            } else {
+                                Image("Fruit\(index + 1)%20Success-3")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.6)
+                            }
                         }
-                    }
-                    .position(fruitPosition(index: index, geometry: geometry))
-                    
-                    Circle()
-                        .opacity(0.01)
-                        .frame(width: 162, height: 162)
-                        .gesture(
-                            LongPressGesture(minimumDuration: 0.1)
-                                .onEnded { _ in
-                                    viewModel.pressBlock(at: index)
-                                    let generator = UINotificationFeedbackGenerator()
-                                    generator.notificationOccurred(.success)
-                                    print(index)
-                                }
-                        )
                         .position(fruitPosition(index: index, geometry: geometry))
-                }
-
-                // Add the TimerComponent to the view
-                TimerComponent(timerHelper: timerHelper)
-                    .position(x: geometry.size.width / 2, y: geometry.size.height * 0.015)
-                    .onAppear {
-                        timerHelper.startTimer()
+                        
+                        Circle()
+                            .opacity(0.01)
+                            .frame(width: 162, height: 162)
+                            .gesture(
+                                LongPressGesture(minimumDuration: 0.1)
+                                    .onEnded { _ in
+                                        viewModel.pressBlock(at: index)
+                                        let generator = UINotificationFeedbackGenerator()
+                                        generator.notificationOccurred(.success)
+                                        print(index)
+                                    }
+                            )
+                            .position(fruitPosition(index: index, geometry: geometry))
                     }
-                NavigationLink(
-                    destination: GameOverView(viewModel: GameOverViewModel()),
-                    isActive: $navigateToGameOver
-                ) {
-                    EmptyView()
-                }
-                .hidden()
-                
-                NavigationLink(
-                    destination: CommunicationGameView().navigationBarBackButtonHidden(),
-                    isActive: $navigateToCommunicationGame
-                ) {
-                    EmptyView()
-                }
-                .hidden()
-                
-                .onChange(of: viewModel.gameOver) { gameOver in
-                    if gameOver {
-                        viewModel.stopSound()
-                        if viewModel.didWin {
-                            navigateToCommunicationGame = true
-                        } else {
+
+                    // Add the TimerComponent to the view
+                    TimerComponent(timerHelper: timerHelper)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.015)
+                        .onAppear {
+                            timerHelper.startTimer()
+                        }
+
+                    NavigationLink(
+                        destination: GameOverView(viewModel: GameOverViewModel()),
+                        isActive: $navigateToGameOver
+                    ) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    
+                    NavigationLink(
+                        destination: CommunicationGameView().navigationBarBackButtonHidden(),
+                        isActive: $navigateToCommunicationGame
+                    ) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    
+                    .onChange(of: viewModel.gameOver) { gameOver in
+                        if gameOver {
                             viewModel.stopSound()
-                            navigateToGameOver = true
+                            if viewModel.didWin {
+                                navigateToCommunicationGame = true
+                            } else {
+                                viewModel.stopSound()
+                                navigateToGameOver = true
+                            }
                         }
                     }
                 }
             }
+        }
+        .onAppear {
+            overlayViewModel.configureStage(for: .SoundView) // Set up overlay for this stage
         }
         .onDisappear {
             viewModel.stopSound()
