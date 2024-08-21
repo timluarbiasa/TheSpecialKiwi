@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
@@ -17,6 +18,22 @@ struct CommunicationGameView: View {
     
     var body: some View {
         ZStack {
+            //Lottie animation
+            if !viewModel.kiwiSuccess {
+                LottieView(name: "KiwiVolume", loopMode: .loop)
+                    .zIndex(-1)
+                    .edgesIgnoringSafeArea(.all)
+            }
+            
+            if viewModel.kiwiSuccess {
+                Image("KiwiHappy")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 860, height: 860)
+                    .padding()
+                    .zIndex(0)
+            }
+            
             //Background image
 //            Image(backgroundImageName)
 //                .resizable()

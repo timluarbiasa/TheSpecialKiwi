@@ -14,6 +14,7 @@ class CommunicationGameViewModel: ObservableObject {
     @Published var gauge: GaugeModel
     @Published var resultImageName: String = ""
     @Published var isRunning: Bool = false
+    @Published var kiwiSuccess: Bool = false
     
     private var timer: Timer?
     
@@ -42,6 +43,9 @@ class CommunicationGameViewModel: ObservableObject {
     private func checkResult() {
         let result = gauge.checkResult(arrowPosition: arrow.position)
         resultImageName = result
+        if result == "KiwiHappy" {
+            kiwiSuccess = true
+        }
     }
     
     func resetArrow() {
