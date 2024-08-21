@@ -13,6 +13,7 @@ struct CommunicationGameView: View {
     let backgroundImageName = "BackgroundJPG"
     let gaugeImageName = "Bar"
     let arrowImageName = "Arrow"
+    let texture = "Texture"
     
     var body: some View {
         ZStack {
@@ -67,8 +68,11 @@ struct CommunicationGameView: View {
                 .frame(width: 30, height: 50)
                 .offset(x: -380, y: viewModel.arrow.position - 150)
                 .zIndex(2)
+            Image(texture)
+                .resizable()
+                .zIndex(3)
+                .blendMode(.multiply)
         }
-        .frame(width: 100, height: viewModel.gauge.totalHeight)
         .onTapGesture {
             if viewModel.isRunning {
                 viewModel.stopArrow()
