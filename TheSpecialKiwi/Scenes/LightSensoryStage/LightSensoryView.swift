@@ -8,6 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import SDWebImageLottieCoder
+import Lottie
 
 struct LightSensoryView: View {
     @StateObject private var viewModel: LightSensoryViewModel
@@ -57,17 +58,9 @@ struct LightSensoryView: View {
                                 
                                 
                                 if viewModel.showKiwiHappy {
-                                    Image("LightSensory_KiwiHappy")
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 400, height: 400)
-                                        .offset(x: 250, y: 10)
+                                    LottieView(name: "KiwiHappy", shouldPlay: .constant(true))
                                 } else {
-                                    WebImage(url: Bundle.main.url(forResource: "KiwiLight", withExtension: "json"))
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 400, height: 400)
-                                        //.offset(x: 250, y: 10)
+                                    LottieView(name: "KiwiLight", shouldPlay: .constant(true))
                                 }
                                 
                                 Image("LightSensory_Texture")
@@ -78,7 +71,7 @@ struct LightSensoryView: View {
                             .ignoresSafeArea()
                         }
                         TimerComponent(timerHelper: timerHelper)
-                            .padding(.top, -390)
+                            .padding(.top, -400)
                     }
                     .contentShape(Rectangle())
                     .onAppear {
@@ -104,7 +97,7 @@ struct LightSensoryView: View {
                 
                 // NavigationLink to SoundView on win
                 NavigationLink(
-                    destination: SoundView(),
+                    destination: SoundView().navigationBarBackButtonHidden(),
                     isActive: $navigateToSoundGame
                 ) {
                     EmptyView()

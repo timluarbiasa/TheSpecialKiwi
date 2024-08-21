@@ -15,11 +15,12 @@ struct TimerComponent: View {
             GeometryReader{ geometry in
                 ZStack(alignment: .leading) {
                     Rectangle()
-                        .fill(Color.gray.opacity(0.5))
+                        //.fill(Color.gray.opacity(0.5))
+                        .fill(Color(hex: "#09276A").opacity(0.3))
                         .frame(height: 12)
                     
                     Rectangle()
-                        .fill(Color.brown.opacity(1.0))
+                        .fill(Color.white.opacity(1.0))
                         .frame(width: abs(geometry.size.width * timerHelper.progress), height: 12)
                         .animation(.linear(duration: 1), value: timerHelper.progress)
                 }
