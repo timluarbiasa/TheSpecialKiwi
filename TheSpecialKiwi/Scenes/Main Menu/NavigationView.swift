@@ -25,6 +25,8 @@ struct NavigationView: View {
                     .foregroundColor(Color(hex: "#FACF38"))
                 VStack {
                     HStack(alignment: .center) {
+                        Spacer()
+                        
                         Button(action: {
                             // your code here!
                         }) {
@@ -32,7 +34,7 @@ struct NavigationView: View {
                                 .padding(.vertical, 10)
                         }
                         .padding(.top, -75)
-                        .padding(.leading, 20)
+                        .padding(.leading, 70)
                         
                         Button(action: {
                             // your code here!
@@ -54,7 +56,9 @@ struct NavigationView: View {
                         }
                         .padding(.top, -55)
                         .padding(.bottom, 26)
-                        .padding(.leading, 550)
+                        .padding(.leading, 450)
+                        
+                        Spacer()
                     }
                 }
                 .navigationBarBackButtonHidden(!viewModel.isBackButtonVisible)

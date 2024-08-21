@@ -15,6 +15,7 @@ class InformationViewController: UIViewController {
         view.backgroundColor = UIColor(named: "ColorSecondary")
         
         addBackgroundImage()
+        addBackButton()
     }
     
     func addBackgroundImage(){
@@ -79,6 +80,7 @@ class InformationViewController: UIViewController {
         textLabel.numberOfLines = 0
         //textLabel.font = UIFont.systemFont(ofSize: 13)
         textLabel.font = UIFont(name: "Sora", size: 13)
+        textLabel.textColor = .black
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // Add the label to the scroll view
@@ -89,7 +91,7 @@ class InformationViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -70),
             scrollView.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 100),
             scrollView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            scrollView.widthAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 0.3),
+            scrollView.widthAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 0.32),
             scrollView.heightAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 0.8)
         ])
         
@@ -122,6 +124,32 @@ class InformationViewController: UIViewController {
     
     func addLabel(){
        // change to here!
+    }
+    
+    func addBackButton() {
+        // Create a UIButton
+        let informationBackButton = UIButton()
+        informationBackButton.setImage(UIImage(named: "informationBackButton"), for: .normal)
+        informationBackButton.imageView?.contentMode = .scaleAspectFit
+        informationBackButton.translatesAutoresizingMaskIntoConstraints = false
+
+        // Add action to navigate back
+        informationBackButton.addTarget(self, action: #selector(navigateBack), for: .touchUpInside)
+
+        self.view.addSubview(informationBackButton)
+
+        // Set up Auto Layout constraints
+        NSLayoutConstraint.activate([
+            informationBackButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
+            informationBackButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 35),
+            informationBackButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1),
+            informationBackButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15)
+        ])
+    }
+    
+    @objc func navigateBack() {
+        // Navigate back to the previous page
+        self.navigationController?.popViewController(animated: false)
     }
 }
 

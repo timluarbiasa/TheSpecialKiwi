@@ -26,8 +26,6 @@
 		1A469B1C2C74488E0065336D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B1A2C74488E0065336D /* InformationViewController.swift */; };
 		1A469B272C744CDA0065336D /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B252C744CDA0065336D /* KiwiHappy.json */; };
 		1A469B282C744CDA0065336D /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B262C744CDA0065336D /* KiwiLight.json */; };
-		1A469B2A2C744EF30065336D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B292C744EF30065336D /* SDWebImageSwiftUI */; };
-		1A469B2C2C744EFD0065336D /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B2B2C744EFD0065336D /* SDWebImageLottieCoder */; };
 		1A469B592C745B830065336D /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B582C745B830065336D /* SoundViewModel.swift */; };
 		1A469B5B2C745C1E0065336D /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5A2C745C1E0065336D /* SoundModel.swift */; };
 		1A469B5F2C745C410065336D /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5D2C745C410065336D /* SoundView.swift */; };
@@ -41,7 +39,6 @@
 		1A469B722C745C640065336D /* Fruit4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B6E2C745C640065336D /* Fruit4.mp3 */; };
 		1A469B732C745C640065336D /* Fruit3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B6F2C745C640065336D /* Fruit3.mp3 */; };
 		1A469B742C745C640065336D /* Fruit2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B702C745C640065336D /* Fruit2.mp3 */; };
-		1A469B772C745EB30065336D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A469B762C745EB30065336D /* Lottie */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -55,6 +52,9 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
+		EF31990C2C7588C8004A81A5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990B2C7588C8004A81A5 /* Lottie */; };
+		EF31990E2C7588D8004A81A5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */; };
+		EF3199102C7588EC004A81A5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,9 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A469B2A2C744EF30065336D /* SDWebImageSwiftUI in Frameworks */,
-				1A469B2C2C744EFD0065336D /* SDWebImageLottieCoder in Frameworks */,
-				1A469B772C745EB30065336D /* Lottie in Frameworks */,
+				EF31990E2C7588D8004A81A5 /* SDWebImageSwiftUI in Frameworks */,
+				EF3199102C7588EC004A81A5 /* SDWebImageLottieCoder in Frameworks */,
+				EF31990C2C7588C8004A81A5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +388,9 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				1A469B292C744EF30065336D /* SDWebImageSwiftUI */,
-				1A469B2B2C744EFD0065336D /* SDWebImageLottieCoder */,
-				1A469B762C745EB30065336D /* Lottie */,
+				EF31990B2C7588C8004A81A5 /* Lottie */,
+				EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */,
+				EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -714,7 +714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -742,7 +742,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -907,20 +907,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A469B292C744EF30065336D /* SDWebImageSwiftUI */ = {
+		EF31990B2C7588C8004A81A5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lottie;
+		};
+		EF31990D2C7588D8004A81A5 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B102C7444D00065336D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
-		1A469B2B2C744EFD0065336D /* SDWebImageLottieCoder */ = {
+		EF31990F2C7588EC004A81A5 /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B0B2C74440A0065336D /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
 			productName = SDWebImageLottieCoder;
-		};
-		1A469B762C745EB30065336D /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
