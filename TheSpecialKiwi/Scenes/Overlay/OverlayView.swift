@@ -107,10 +107,17 @@ struct OverlayView: View {
     }
     
     private func lockOrientationLandscape() {
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-        UINavigationController.attemptRotationToDeviceOrientation()
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            
+            // Use the updated method for iOS 16 and later
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeLeft))
+            } else {
+                // Fallback for older iOS versions
+                UINavigationController().setNeedsUpdateOfSupportedInterfaceOrientations()
+            }
+        }
     }
-}
 
 // MARK: - Preview
 struct StageOverlayView_Previews: PreviewProvider {
