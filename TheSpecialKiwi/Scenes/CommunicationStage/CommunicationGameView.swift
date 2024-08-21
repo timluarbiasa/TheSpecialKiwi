@@ -31,23 +31,9 @@ struct CommunicationGameView: View {
                     .scaledToFit()
                     .frame(width: 860, height: 860)
                     .padding()
-                    .zIndex(0)
-            }
-            
-            //Background image
-//            Image(backgroundImageName)
-//                .resizable()
-//                .scaledToFill()
-//                .edgesIgnoringSafeArea(.all)
-//                .zIndex(-10)
-            
-            if !viewModel.resultImageName.isEmpty {
-                Image(viewModel.resultImageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 860, height: 860)
-                    .padding()
-                    .zIndex(0)
+                    .zIndex(10)
+                    .offset(x: 30, y: 0)  // Adjust to position the image as desired
+                    .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
             }
             
             //Main content
@@ -79,15 +65,22 @@ struct CommunicationGameView: View {
                 )
             }
             
+            //Background image
+            Image(backgroundImageName)
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .zIndex(-10)
+            
             //Arrow image
             Image(arrowImageName)
                 .resizable()
                 .frame(width: 30, height: 50)
                 .offset(x: -380, y: viewModel.arrow.position - 150)
-                .zIndex(2)
+                .zIndex(12)
             Image(texture)
                 .resizable()
-                .zIndex(3)
+                .zIndex(13)
                 .blendMode(.multiply)
         }
         .onTapGesture {
