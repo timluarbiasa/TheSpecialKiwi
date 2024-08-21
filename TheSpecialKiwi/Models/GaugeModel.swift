@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GaugeModel {
     let totalHeight: CGFloat = 300
+    var position: CGFloat
     
     var greenZoneTop: CGFloat {
         totalHeight / 3
