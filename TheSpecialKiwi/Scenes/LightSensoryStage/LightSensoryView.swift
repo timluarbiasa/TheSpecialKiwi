@@ -71,7 +71,7 @@ struct LightSensoryView: View {
                             .ignoresSafeArea()
                         }
                         TimerComponent(timerHelper: timerHelper)
-                            .padding(.top, -400)
+                            .padding(.top, -397)
                     }
                     .contentShape(Rectangle())
                     .onAppear {
