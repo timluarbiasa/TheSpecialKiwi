@@ -13,10 +13,5 @@ class GameOverViewModel: ObservableObject {
     
     func retry() {
         shouldRetry = true
-        stopSound()
-    }
-    
-    func stopSound() {
-        audioPlayer?.stop() // Stop the currently playing sound
     }
 }
