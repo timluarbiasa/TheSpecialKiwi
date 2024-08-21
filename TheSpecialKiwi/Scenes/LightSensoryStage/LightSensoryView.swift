@@ -107,6 +107,7 @@ struct LightSensoryView: View {
             if gameOver {
                 if viewModel.didWin {
                     navigateToSoundGame = true
+                    viewModel.playWinSound()
                 } else {
                     navigateToGameOver = true
                 }
