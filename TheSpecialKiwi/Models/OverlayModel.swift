@@ -34,8 +34,8 @@ class OverlayModel: ObservableObject {
             tapDescription = "Tap the screen every time Kiwi"
             tapDescriptionPart2 = "does to compliment him!"
             tapColoredRange = tapDescription.range(of: "Tap the screen")
-            titleColor = Color("ColorBackgroundAccents") // Using asset color name
-            percentageColor = Color("PinkMagenta") // Using asset color name
+            titleColor = Color("ColorBackgroundAccents")
+            percentageColor = Color("PinkMagenta")
             descriptionColor = Color("PinkMagenta")
             holdIcon = "load.png"
             tapIcon = "tap.png"
@@ -61,7 +61,7 @@ class OverlayModel: ObservableObject {
             stageDescriptionPart2 = "hypersensitivity to bright lights."
             tapDescription = "Pull the curtain to block the"
             tapDescriptionPart2 = "blazing sunlight from Kiwi!"
-            tapColoredRange = tapDescription.range(of: "Pull the curtain") // Highlight "Pull the curtain"
+            tapColoredRange = tapDescription.range(of: "Pull the curtain")
             titleColor = Color("ColorBackgroundAccents")
             percentageColor = Color("PinkMagenta")
             descriptionColor = Color("PinkMagenta")
