@@ -14,6 +14,7 @@ struct OverlayView: View {
         ZStack {
             Color("ColorSecondary")
                 .edgesIgnoringSafeArea(.all)
+                .opacity(0.8)
             
             VStack(spacing: 20) {
                 // Title with dangers.png on both sides

@@ -29,7 +29,7 @@ class OverlayModel: ObservableObject {
         case .EyeContactStageView:
             stageTitle = "EYE CONTACT DIFFICULTIES"
             stagePercentage = "50-90%"
-            stageDescriptionPart1 = "autistic people have troubles"
+            stageDescriptionPart1 = "autistic people have trouble"
             stageDescriptionPart2 = "keeping eye contact."
             tapDescription = "Tap the screen every time Kiwi"
             tapDescriptionPart2 = "does to compliment him!"
