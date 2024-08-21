@@ -5,6 +5,10 @@ DerivedData/
 .build/
 build/
 
+# Ignore cruft in the project bundle
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+
 ## App packaging
 *.ipa
 *.dSYM.zip
