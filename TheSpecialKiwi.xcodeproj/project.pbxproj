@@ -14,6 +14,7 @@
 		1A8D7C082C758DB40073C3CA /* KiwiVolume.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8D7C072C758DB30073C3CA /* KiwiVolume.json */; };
 		1A8D7C0B2C758DDD0073C3CA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8D7C0A2C758DDD0073C3CA /* Lottie */; };
 		1A8D7C0D2C758F5F0073C3CA /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D7C0C2C758F5F0073C3CA /* LottieView.swift */; };
+		1A8D7C0F2C7596010073C3CA /* Volume.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A8D7C0E2C7596000073C3CA /* Volume.mp3 */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -53,6 +54,7 @@
 		1A59E9332C6C4A9400D61FE0 /* CommunicationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationGameView.swift; sourceTree = "<group>"; };
 		1A8D7C072C758DB30073C3CA /* KiwiVolume.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiVolume.json; sourceTree = "<group>"; };
 		1A8D7C0C2C758F5F0073C3CA /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1A8D7C0E2C7596000073C3CA /* Volume.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Volume.mp3; sourceTree = "<group>"; };
 		44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSpecialKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSpecialKiwiApp.swift; sourceTree = "<group>"; };
 		44138A342C6B4AEC005E5FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		1A59E92F2C6C488300D61FE0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1A8D7C0E2C7596000073C3CA /* Volume.mp3 */,
 				1A59E9302C6C48B200D61FE0 /* CommunicationGameViewModel.swift */,
 			);
 			path = ViewModels;
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8D7C0F2C7596010073C3CA /* Volume.mp3 in Resources */,
 				1A8D7C082C758DB40073C3CA /* KiwiVolume.json in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,

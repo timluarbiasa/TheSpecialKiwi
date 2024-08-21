@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import AVFoundation
 
 class CommunicationGameViewModel: ObservableObject {
     @Published var arrow: ArrowModel
@@ -17,14 +18,30 @@ class CommunicationGameViewModel: ObservableObject {
     @Published var kiwiSuccess: Bool = false
     
     private var timer: Timer?
+    private var audioPlayer: AVAudioPlayer?
     
     init() {
         self.arrow = ArrowModel(position: 150)
         self.gauge = GaugeModel(position: 150)
+        loadSoundEffect()
+    }
+    
+    //Loads the sound effect
+    private func loadSoundEffect() {
+        if let soundURL = Bundle.main.url(forResource: "Volume", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.numberOfLoops = -1 //Loops indefinitely
+                print("Sound playing")
+            } catch {
+                print("Error loading sound effect: \(error)")
+            }
+        }
     }
     
     func startArrow() {
         isRunning = true
+        audioPlayer?.play()
         timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] _ in self?.updateArrowPosition()
         }
     }
@@ -33,6 +50,7 @@ class CommunicationGameViewModel: ObservableObject {
         isRunning = false
         timer?.invalidate()
         timer = nil
+        audioPlayer?.stop()
         checkResult()
     }
     
