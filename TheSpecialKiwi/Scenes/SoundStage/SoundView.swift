@@ -58,8 +58,7 @@ struct SoundView: View {
                         .position(fruitPosition(index: index, geometry: geometry))
                 }
 
-                // Add the TimerComponent to the view (if needed for visual representation)
-                TimerComponent(timerHelper: TimerHelper(totalTime: 10)) // Example placeholder
+                TimerComponent(timerHelper: TimerHelper(totalTime: 10))
                     .position(x: geometry.size.width / 2, y: geometry.size.height * 0.021)
             }
         }

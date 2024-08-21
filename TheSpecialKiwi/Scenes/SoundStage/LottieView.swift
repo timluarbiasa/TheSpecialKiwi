@@ -17,7 +17,7 @@ struct LottieView: UIViewRepresentable {
         let view = UIView(frame: .zero)
         
         let animationView = LottieAnimationView(name: name)
-        animationView.contentMode = .scaleAspectFit // Ensures aspect ratio is maintained
+        animationView.contentMode = .scaleAspectFit
         animationView.loopMode = loopMode
         
         context.coordinator.animationView = animationView

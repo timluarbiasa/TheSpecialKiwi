@@ -17,11 +17,10 @@ struct OverlayView: View {
                 .opacity(0.8)
             
             VStack(spacing: 20) {
-                // Title with dangers.png on both sides
                 HStack {
                     Image("dangers")
                         .resizable()
-                        .frame(width: 40, height: 40) // Adjust size as needed
+                        .frame(width: 40, height: 40)
                     
                     Text(viewModel.stageTitle)
                         .padding(25)
@@ -31,10 +30,9 @@ struct OverlayView: View {
                     
                     Image("dangers")
                         .resizable()
-                        .frame(width: 40, height: 40) // Adjust size as needed
+                        .frame(width: 40, height: 40)
                 }
                 
-                // Percentage & Description
                 VStack(spacing: 1) {
                     Text(viewModel.stagePercentage)
                         .font(.custom("Sora", size: 17))
@@ -50,10 +48,8 @@ struct OverlayView: View {
                     .foregroundColor(viewModel.descriptionColor)
                     .multilineTextAlignment(.center)
                 }
+                .padding(10)
                 
-                Spacer()
-                
-                // Tap Description
                 VStack(spacing: 1){
                     buildTapDescription()
                         .font(.custom("Sora", size: 17))
@@ -69,7 +65,6 @@ struct OverlayView: View {
                     Spacer()
                 }
                 
-                // Hold to Pause
                 HStack(spacing: 5) {
                     Text("HOLD")
                         .font(.custom("Lilita One", size: 16))
@@ -82,7 +77,7 @@ struct OverlayView: View {
                 }
                 .foregroundColor(.white)
             }
-            .padding(20)
+            .padding(15)
         }
         .onAppear {
             lockOrientationLandscape()

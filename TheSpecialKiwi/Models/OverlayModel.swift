@@ -21,7 +21,6 @@ class OverlayModel: ObservableObject {
     @Published var tapIcon: String = "tap.png"
     @Published var overlayBackgroundImage: String = "Stage Info Overlay - Eye Contact.png"
     
-    // Property to track the colored range of the tapDescription
     @Published var tapColoredRange: Range<String.Index>?
 
     func configureStage(for stage: GameStage) {

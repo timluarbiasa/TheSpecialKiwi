@@ -43,7 +43,7 @@ struct LightSensoryView: View {
                             
                             Button(action: {
                                 viewModel.resetGame()
-                                timerHelper.resetTimer() // Reset the timer when the game resets
+                                timerHelper.resetTimer()
                             }) {
                                 Text("Play Again")
                                     .font(.title2)
@@ -109,7 +109,7 @@ struct LightSensoryView: View {
                     DragGesture()
                         .onEnded { value in
                             if value.translation.width > 0 {
-                                viewModel.handleSwipe() // Handle the swipe action
+                                viewModel.handleSwipe()
                             }
                         }
                 )

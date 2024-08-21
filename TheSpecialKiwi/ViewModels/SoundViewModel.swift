@@ -51,7 +51,6 @@ class SoundViewModel: ObservableObject {
         let index = interactionOrder[currentActiveIndex]
         sounds[index].isRed = true
         
-        // Play sound corresponding to the fruit
         playSound(for: index)
 
         timer = Just(())
@@ -89,8 +88,8 @@ class SoundViewModel: ObservableObject {
 
         if successfulHolds >= 4 {
             kiwiSuccess = true
-            resetSounds() // Stop spawning new Lottie animations
-            stopSound() // Stop the sound when Kiwi turns to SVG
+            resetSounds()
+            stopSound()
         } else {
             moveToNextFruit()
         }
@@ -109,7 +108,7 @@ class SoundViewModel: ObservableObject {
     }
 
     private func stopSound() {
-        audioPlayer?.stop() // Stop the currently playing sound
+        audioPlayer?.stop()
     }
 
     func randomLottieName(for index: Int) -> String {
