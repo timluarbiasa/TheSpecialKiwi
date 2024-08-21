@@ -123,7 +123,7 @@ struct StageOverlayView_Previews: PreviewProvider {
     
     static func previewViewModel() -> OverlayModel {
         let viewModel = OverlayModel()
-        viewModel.configureStage(for: .lightOverstimulation)
+        viewModel.configureStage(for: .SoundView)
         return viewModel
     }
 }

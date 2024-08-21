@@ -26,7 +26,7 @@ class OverlayModel: ObservableObject {
 
     func configureStage(for stage: GameStage) {
         switch stage {
-        case .eyeContact:
+        case .EyeContactStageView:
             stageTitle = "EYE CONTACT DIFFICULTIES"
             stagePercentage = "50-90%"
             stageDescriptionPart1 = "autistic people have troubles"
@@ -54,7 +54,7 @@ class OverlayModel: ObservableObject {
             holdIcon = "load.png"
             tapIcon = "tap.png"
             overlayBackgroundImage = "Stage Info Overlay - Eye Contact.png"
-        case .lightOverstimulation:
+        case .LightSensoryView:
             stageTitle = "LIGHT OVERSTIMULATION"
             stagePercentage = "50-70%"
             stageDescriptionPart1 = "autistic people have"
@@ -68,7 +68,7 @@ class OverlayModel: ObservableObject {
             holdIcon = "load.png"
             tapIcon = "tap.png"
             overlayBackgroundImage = "Stage Info Overlay - Eye Contact.png"
-        case .soundOverstimulation:
+        case .SoundView:
             stageTitle = "SOUND OVERSTIMULATION"
             stagePercentage = "65-80%"
             stageDescriptionPart1 = "autistic people have"
@@ -87,8 +87,8 @@ class OverlayModel: ObservableObject {
 }
 
 enum GameStage {
-    case eyeContact
+    case EyeContactStageView
     case volumeControl
-    case lightOverstimulation
-    case soundOverstimulation
+    case LightSensoryView
+    case SoundView
 }
