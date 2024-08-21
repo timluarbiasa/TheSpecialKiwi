@@ -21,15 +21,24 @@ class CommunicationGameViewModel: ObservableObject {
     
     private var timer: Timer?
     private var audioPlayer: AVAudioPlayer?
+    private var timerHelper: TimerHelper
     
-    init() {
+    init(timerHelper: TimerHelper) {
         self.arrow = ArrowModel(position: 150)
         self.gauge = GaugeModel(position: 150)
+        self.timerHelper = timerHelper
+        
+        //Set up callback for when timer ends
+        self.timerHelper.onTimerEnd = { [weak self] in
+            guard let self = self else { return }
+            self.hasWon = false
+            self.hasLost = true
+        }
         loadSoundEffect()
     }
     
     //Loads the sound effect
-    private func loadSoundEffect() {
+    func loadSoundEffect() {
         if let soundURL = Bundle.main.url(forResource: "Volume", withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)

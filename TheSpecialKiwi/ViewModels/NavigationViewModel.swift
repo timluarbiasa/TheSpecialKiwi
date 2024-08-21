@@ -17,15 +17,12 @@ enum Game {
 
 class NavigationViewModel: ObservableObject {
     @Published var currentGame: Game?
-    @Published var isBackButtonVisible: Bool = false
     
     func navigateToGame(_ game: Game) {
         currentGame = game
-        isBackButtonVisible = true
     }
     
     func goBack() {
         currentGame = nil
-        isBackButtonVisible = false
     }
 }

@@ -85,7 +85,7 @@ struct SoundView: View {
                 .hidden()
                 
                 NavigationLink(
-                    destination: CommunicationGameView(viewModel: CommunicationGameViewModel()),
+                    destination: CommunicationGameView(),
                     isActive: $navigateToCommunicationGame
                 ) {
                     EmptyView()

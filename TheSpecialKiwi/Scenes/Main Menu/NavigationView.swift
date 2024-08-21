@@ -61,23 +61,16 @@ struct NavigationView: View {
                         Spacer()
                     }
                 }
-                .navigationBarBackButtonHidden(!viewModel.isBackButtonVisible)
+                .navigationBarBackButtonHidden()
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        if viewModel.isBackButtonVisible {
-                            Button(action: {
-                                viewModel.goBack()
-                            }) {
-                                Text("Back")
-                            }
-                        }
                     }
                 }
                 .navigationDestination(isPresented: Binding(
                     get: { viewModel.currentGame == .communication },
                     set: { if !$0 { viewModel.goBack() } }
                 )) {
-                    CommunicationGameView(viewModel: CommunicationGameViewModel())
+                    CommunicationGameView()
                 }
 //                .navigationDestination(destination: CommunicationGameView(viewModel: CommunicationGameViewModel()), isActive: Binding(
 //                    get: { viewModel.currentGame == .communication },
