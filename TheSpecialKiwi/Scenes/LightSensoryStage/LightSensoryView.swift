@@ -104,7 +104,7 @@ struct LightSensoryView: View {
                 
                 // NavigationLink to SoundView on win
                 NavigationLink(
-                    destination: SoundView(),
+                    destination: SoundView().navigationBarBackButtonHidden(),
                     isActive: $navigateToSoundGame
                 ) {
                     EmptyView()

@@ -72,7 +72,7 @@ struct SoundView: View {
 
                 // Add the TimerComponent to the view
                 TimerComponent(timerHelper: timerHelper)
-                    .position(x: geometry.size.width / 2, y: geometry.size.height * 0.021)
+                    .position(x: geometry.size.width / 2, y: geometry.size.height * 0.015)
                     .onAppear {
                         timerHelper.startTimer()
                     }
