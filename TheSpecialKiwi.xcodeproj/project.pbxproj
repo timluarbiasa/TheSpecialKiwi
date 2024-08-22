@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A067E7F2C730EC5003017E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A067E7E2C730EC5003017E5 /* ColorExtension.swift */; };
-		1A067E822C731466003017E5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A067E812C731466003017E5 /* SDWebImageLottieCoder */; };
+		1A24B85C2C76DC0D0047DA76 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A24B85B2C76DC0D0047DA76 /* Lottie */; };
+		1A24B85E2C76DC270047DA76 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1A24B85D2C76DC270047DA76 /* SDWebImageLottieCoder */; };
 		1A469AC92C7431EE0065336D /* GameOverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469AC82C7431EE0065336D /* GameOverViewModel.swift */; };
 		1A469ACC2C7432560065336D /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469ACB2C7432560065336D /* GameOverView.swift */; };
 		1A59E92C2C6C464A00D61FE0 /* ArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E92B2C6C464A00D61FE0 /* ArrowModel.swift */; };
@@ -22,7 +23,6 @@
 		1A59E95F2C6C727300D61FE0 /* BackButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E95E2C6C727300D61FE0 /* BackButtonModel.swift */; };
 		1A59E9612C6C727900D61FE0 /* CommunicationButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9602C6C727900D61FE0 /* CommunicationButtonModel.swift */; };
 		1A59E9632C6C728500D61FE0 /* EyeContactButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A59E9622C6C728500D61FE0 /* EyeContactButtonModel.swift */; };
-		1A720F4D2C6DA7F900E909EC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A720F4C2C6DA7F900E909EC /* Lottie */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -93,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A720F4D2C6DA7F900E909EC /* Lottie in Frameworks */,
-				1A067E822C731466003017E5 /* SDWebImageLottieCoder in Frameworks */,
+				1A24B85C2C76DC0D0047DA76 /* Lottie in Frameworks */,
+				1A24B85E2C76DC270047DA76 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +288,8 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				1A720F4C2C6DA7F900E909EC /* Lottie */,
-				1A067E812C731466003017E5 /* SDWebImageLottieCoder */,
+				1A24B85B2C76DC0D0047DA76 /* Lottie */,
+				1A24B85D2C76DC270047DA76 /* SDWebImageLottieCoder */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -781,15 +781,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A067E812C731466003017E5 /* SDWebImageLottieCoder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1A067E802C731466003017E5 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
-			productName = SDWebImageLottieCoder;
-		};
-		1A720F4C2C6DA7F900E909EC /* Lottie */ = {
+		1A24B85B2C76DC0D0047DA76 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A720F4B2C6DA7F900E909EC /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		1A24B85D2C76DC270047DA76 /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A067E802C731466003017E5 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
