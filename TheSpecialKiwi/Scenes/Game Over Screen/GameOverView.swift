@@ -13,31 +13,19 @@ struct GameOverView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Game Over")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.red)
-                    .padding()
-                
-                Button(action: {
-                    viewModel.retry()
-                }) {
-                    Text("Retry")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-            }
-            .padding()
+            Image("GameResultOverlay")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             .background(
                 NavigationLink(destination: NavigationView().environmentObject(NavigationViewModel()), isActive: $navigateToRoot) {
                     EmptyView()
                 }
                     .hidden()
             )
+            .onTapGesture {
+                viewModel.retry()
+            }
             .onChange(of: viewModel.shouldRetry) { shouldRetry in
                 if shouldRetry {
                     navigateToRoot = true

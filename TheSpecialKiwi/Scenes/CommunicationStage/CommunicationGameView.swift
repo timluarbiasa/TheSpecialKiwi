@@ -95,7 +95,7 @@ struct CommunicationGameView: View {
                     
                     if viewModel.hasLost {
                         NavigationLink(
-                            destination: GameOverView(viewModel: GameOverViewModel()),
+                            destination: GameOverView(viewModel: GameOverViewModel()).navigationBarBackButtonHidden(),
                             isActive: $navigateToGameOver
                         ) {
                             EmptyView()

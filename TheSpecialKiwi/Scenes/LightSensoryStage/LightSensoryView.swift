@@ -86,7 +86,7 @@ struct LightSensoryView: View {
                 
                 //NavigationLink to Game Over View
                 NavigationLink(
-                    destination: GameOverView(viewModel: GameOverViewModel()),
+                    destination: GameOverView(viewModel: GameOverViewModel()).navigationBarBackButtonHidden(),
                     isActive: $navigateToGameOver
                 ) {
                     EmptyView()
