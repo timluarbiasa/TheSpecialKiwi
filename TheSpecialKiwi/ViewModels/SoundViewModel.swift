@@ -15,20 +15,9 @@ class SoundViewModel: ObservableObject {
     private var successfulHolds: Int = 0
     private var audioPlayer: AVAudioPlayer?
     private var stopTime: AnyCancellable?
+    private var isPaused = false
 
-    init() {
-        startGame()
-        startTimer()
-    }
-
-    private func startTimer() {
-        // Start a timer that triggers after 10 seconds
-        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
-            guard let self = self else { return }
-            self.didWin = false
-            self.endGame() // Mark the game as lost
-        }
-    }
+    init() {}
 
     func startGame() {
         randomizedLottieAnimations = ["Fruit1-2", "Fruit2-2", "Fruit3-2", "Fruit4-2"].shuffled()
@@ -70,7 +59,7 @@ class SoundViewModel: ObservableObject {
 
         stopTime = Just(())
             .delay(for: .seconds(2), scheduler: RunLoop.main)
-            .sink { [ weak self ] in
+            .sink { [weak self] in
                 self?.moveToNextFruit()
             }
     }
@@ -122,6 +111,18 @@ class SoundViewModel: ObservableObject {
             } catch {
                 print("Error playing sound: \(error.localizedDescription)")
             }
+        }
+    }
+
+    func pauseSound() {
+        audioPlayer?.pause() // Pause the sound
+        isPaused = true
+    }
+
+    func resumeSound() {
+        if isPaused {
+            audioPlayer?.play() // Resume the sound
+            isPaused = false
         }
     }
 

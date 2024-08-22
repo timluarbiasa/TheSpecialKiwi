@@ -14,6 +14,8 @@ struct LightSensoryView: View {
     
     @State private var navigateToGameOver = false
     @State private var navigateToSoundGame = false
+    @State private var showOverlay = true // Manage overlay visibility
+    @ObservedObject var overlayViewModel = OverlayModel() // Overlay
     
     init() {
         let screenWidth = UIScreen.main.bounds.width
@@ -29,11 +31,20 @@ struct LightSensoryView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("LightSensory_Background1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .ignoresSafeArea()
-        
+                if showOverlay {
+                    // Pass a closure to start the game and sound when overlay is tapped
+                    OverlayView(viewModel: overlayViewModel) {
+                        showOverlay = false
+                    }
+                    .onAppear {
+                        overlayViewModel.configureStage(for: .SoundView)
+                    }
+                } else {
+                    Image("LightSensory_Background1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .ignoresSafeArea()
+                    
                     VStack {
                         HStack {
                             ZStack(alignment: .leading) {
@@ -83,6 +94,7 @@ struct LightSensoryView: View {
                                 }
                             }
                     )
+                }
                 
                 //NavigationLink to Game Over View
                 NavigationLink(

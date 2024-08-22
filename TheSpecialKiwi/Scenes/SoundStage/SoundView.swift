@@ -14,16 +14,12 @@ struct SoundView: View {
     
     @State private var navigateToGameOver = false
     @State private var navigateToCommunicationGame = false
-    
-    // New state to manage overlay visibility
-    @State private var showOverlay = true
+    @State private var showOverlay = true // Manage overlay visibility
     @ObservedObject var overlayViewModel = OverlayModel() // Overlay view model
 
     init() {
         let timerHelperInstance = TimerHelper(totalTime: 10)
-        
         _viewModel = StateObject(wrappedValue: SoundViewModel())
-        
         _timerHelper = StateObject(wrappedValue: timerHelperInstance)
     }
 
@@ -31,8 +27,13 @@ struct SoundView: View {
         GeometryReader { geometry in
             ZStack {
                 if showOverlay {
+                    // Pass a closure to start the game and sound when overlay is tapped
                     OverlayView(viewModel: overlayViewModel) {
-                        showOverlay = false // Hide overlay and show the game view
+                        showOverlay = false
+                        viewModel.startGame() // Start game and sound after overlay tap
+                    }
+                    .onAppear {
+                        overlayViewModel.configureStage(for: .SoundView)
                     }
                 } else {
                     Image("BG-2")
@@ -73,23 +74,22 @@ struct SoundView: View {
                                         viewModel.pressBlock(at: index)
                                         let generator = UINotificationFeedbackGenerator()
                                         generator.notificationOccurred(.success)
-                                        print(index)
                                     }
                             )
                             .position(fruitPosition(index: index, geometry: geometry))
                     }
 
-                    // Add the TimerComponent to the view
                     TimerComponent(timerHelper: timerHelper)
                         .position(x: geometry.size.width / 2, y: geometry.size.height * 0.015)
                         .onAppear {
                             timerHelper.startTimer()
                         }
-
+                    
                     NavigationLink(
                         destination: GameOverView(viewModel: GameOverViewModel()),
                         isActive: $navigateToGameOver
-                    ) {
+                    )
+                    {
                         EmptyView()
                     }
                     .hidden()
@@ -117,7 +117,7 @@ struct SoundView: View {
             }
         }
         .onAppear {
-            overlayViewModel.configureStage(for: .SoundView) // Set up overlay for this stage
+            overlayViewModel.configureStage(for: .SoundView)
         }
         .onDisappear {
             viewModel.stopSound()
@@ -135,6 +135,7 @@ struct SoundView: View {
         }
     }
 }
+
 
 #Preview {
     SoundView()

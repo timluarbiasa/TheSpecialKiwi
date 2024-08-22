@@ -24,8 +24,6 @@
 		1A469B142C7445250065336D /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B132C7445250065336D /* TimerComponent.swift */; };
 		1A469B1B2C74488E0065336D /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B192C74488E0065336D /* InformationView.swift */; };
 		1A469B1C2C74488E0065336D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B1A2C74488E0065336D /* InformationViewController.swift */; };
-		1A469B272C744CDA0065336D /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B252C744CDA0065336D /* KiwiHappy.json */; };
-		1A469B282C744CDA0065336D /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A469B262C744CDA0065336D /* KiwiLight.json */; };
 		1A469B592C745B830065336D /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B582C745B830065336D /* SoundViewModel.swift */; };
 		1A469B5B2C745C1E0065336D /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5A2C745C1E0065336D /* SoundModel.swift */; };
 		1A469B5F2C745C410065336D /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5D2C745C410065336D /* SoundView.swift */; };
@@ -42,7 +40,6 @@
 		1A8D7C112C7597B90073C3CA /* Volume.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A8D7C102C7597B90073C3CA /* Volume.mp3 */; };
 		1A8D7C132C7598020073C3CA /* KiwiVolume.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8D7C122C7598020073C3CA /* KiwiVolume.json */; };
 		1AD487972C759BFD00A73C99 /* LottieCommunicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD487962C759BFD00A73C99 /* LottieCommunicationView.swift */; };
-		1AD487992C759DA900A73C99 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1AD487982C759DA900A73C99 /* Lottie */; };
 		44138A332C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A322C6B4AEC005E5FAD /* TheSpecialKiwiApp.swift */; };
 		44138A352C6B4AEC005E5FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A342C6B4AEC005E5FAD /* ContentView.swift */; };
 		44138A372C6B4AEC005E5FAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A362C6B4AEC005E5FAD /* Item.swift */; };
@@ -71,6 +68,9 @@
 		F11D24482C75CF0200DC5FD4 /* Sora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F11D24472C75CF0200DC5FD4 /* Sora.ttf */; };
 		F11D24492C75CF0200DC5FD4 /* Sora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F11D24472C75CF0200DC5FD4 /* Sora.ttf */; };
 		F11D244A2C75CF0200DC5FD4 /* Sora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F11D24472C75CF0200DC5FD4 /* Sora.ttf */; };
+		F11D244C2C76D49D00DC5FD4 /* LightSensoryMusics in Resources */ = {isa = PBXBuildFile; fileRef = F11D244B2C76D49D00DC5FD4 /* LightSensoryMusics */; };
+		F11D244E2C76D4A300DC5FD4 /* LightSensoryLottie in Resources */ = {isa = PBXBuildFile; fileRef = F11D244D2C76D4A300DC5FD4 /* LightSensoryLottie */; };
+		F11D24502C76D50300DC5FD4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F11D244F2C76D50300DC5FD4 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +108,6 @@
 		1A469B132C7445250065336D /* TimerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
 		1A469B192C74488E0065336D /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		1A469B1A2C74488E0065336D /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		1A469B252C744CDA0065336D /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy.json; sourceTree = "<group>"; };
-		1A469B262C744CDA0065336D /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
 		1A469B582C745B830065336D /* SoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		1A469B5A2C745C1E0065336D /* SoundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
 		1A469B5D2C745C410065336D /* SoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
@@ -148,6 +146,8 @@
 		F11D24422C75CDFE00DC5FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F11D24432C75CEA400DC5FD4 /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
 		F11D24472C75CF0200DC5FD4 /* Sora.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sora.ttf; sourceTree = "<group>"; };
+		F11D244B2C76D49D00DC5FD4 /* LightSensoryMusics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LightSensoryMusics; sourceTree = "<group>"; };
+		F11D244D2C76D4A300DC5FD4 /* LightSensoryLottie */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LightSensoryLottie; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD487992C759DA900A73C99 /* Lottie in Frameworks */,
+				F11D24502C76D50300DC5FD4 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				1A469B052C7443DE0065336D /* LightSensoryView.swift */,
-				1A469B252C744CDA0065336D /* KiwiHappy.json */,
-				1A469B262C744CDA0065336D /* KiwiLight.json */,
+				F11D244B2C76D49D00DC5FD4 /* LightSensoryMusics */,
+				F11D244D2C76D4A300DC5FD4 /* LightSensoryLottie */,
 			);
 			path = LightSensoryStage;
 			sourceTree = "<group>";
@@ -432,7 +432,7 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				1AD487982C759DA900A73C99 /* Lottie */,
+				F11D244F2C76D50300DC5FD4 /* Lottie */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -530,16 +530,16 @@
 				1A469B6C2C745C5B0065336D /* Fruit2-2.json in Resources */,
 				F11D24442C75CEA400DC5FD4 /* LilitaOne-Regular.ttf in Resources */,
 				1A469B732C745C640065336D /* Fruit3.mp3 in Resources */,
+				F11D244E2C76D4A300DC5FD4 /* LightSensoryLottie in Resources */,
 				44138A3C2C6B4AED005E5FAD /* Preview Assets.xcassets in Resources */,
 				1A469B6B2C745C5B0065336D /* Fruit3-2.json in Resources */,
 				1A469B712C745C640065336D /* Fruit1.mp3 in Resources */,
 				1A469B6A2C745C5B0065336D /* Fruit1-2.json in Resources */,
 				1A8D7C132C7598020073C3CA /* KiwiVolume.json in Resources */,
 				1A469B742C745C640065336D /* Fruit2.mp3 in Resources */,
-				1A469B272C744CDA0065336D /* KiwiHappy.json in Resources */,
-				1A469B282C744CDA0065336D /* KiwiLight.json in Resources */,
 				1A469B682C745C5B0065336D /* Fruit4-2.json in Resources */,
 				F11D24482C75CF0200DC5FD4 /* Sora.ttf in Resources */,
+				F11D244C2C76D49D00DC5FD4 /* LightSensoryMusics in Resources */,
 				1A469B722C745C640065336D /* Fruit4.mp3 in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
 				1A8D7C112C7597B90073C3CA /* Volume.mp3 in Resources */,
@@ -969,7 +969,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1AD487982C759DA900A73C99 /* Lottie */ = {
+		F11D244F2C76D50300DC5FD4 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
