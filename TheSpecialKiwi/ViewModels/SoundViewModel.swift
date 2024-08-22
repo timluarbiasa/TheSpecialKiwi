@@ -7,6 +7,7 @@ class SoundViewModel: ObservableObject {
     @Published var kiwiSuccess: Bool = false
     @Published var gameOver: Bool = false
     @Published var didWin: Bool = false
+    @Published var showOverlay: Bool = true
 
     private var timer: Timer?
     private var randomizedLottieAnimations: [String] = []
@@ -39,15 +40,19 @@ class SoundViewModel: ObservableObject {
         kiwiSuccess = false
         currentActiveIndex = 0
         successfulHolds = 0
-        activateNextFruit()
-        print("Start")
+        if showOverlay == false{
+            if gameOver == false{
+                activateNextFruit()
+            }
+        }
+        print("Justin: Start Game Sound Sensory")
     }
     
     func endGame() {
         timer?.invalidate() // Stop the timer when the game ends
         gameOver = true
         stopSound()
-        print("ended")
+        print("Justin: End Game Sound Sensory")
     }
 
     private func resetSounds() {
@@ -120,7 +125,7 @@ class SoundViewModel: ObservableObject {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
                 audioPlayer?.play()
             } catch {
-                print("Error playing sound: \(error.localizedDescription)")
+                print("Justin: Error playing sound: \(error.localizedDescription)")
             }
         }
     }

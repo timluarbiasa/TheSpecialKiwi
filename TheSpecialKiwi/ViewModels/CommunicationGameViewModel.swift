@@ -43,9 +43,9 @@ class CommunicationGameViewModel: ObservableObject {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
                 audioPlayer?.numberOfLoops = -1 //Loops indefinitely
-                print("Sound playing")
+                print("James: Sound playing")
             } catch {
-                print("Error loading sound effect: \(error)")
+                print("James: Error loading sound effect: \(error)")
             }
         }
     }
@@ -74,7 +74,7 @@ class CommunicationGameViewModel: ObservableObject {
     }
     
     private func checkResult() {
-        print("Checking result")
+        print("James: Checking result")
         let result = gauge.checkResult(arrowPosition: arrow.position)
         resultMessage = result
         if result == "KiwiHappy" {
