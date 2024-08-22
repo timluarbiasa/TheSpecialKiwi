@@ -70,7 +70,7 @@ struct NavigationView: View {
                     get: { viewModel.currentGame == .communication },
                     set: { if !$0 { viewModel.goBack() } }
                 )) {
-                    CommunicationGameView().navigationBarBackButtonHidden()
+                    LightSensoryView().navigationBarBackButtonHidden()
                 }
 //                .navigationDestination(destination: CommunicationGameView(viewModel: CommunicationGameViewModel()), isActive: Binding(
 //                    get: { viewModel.currentGame == .communication },

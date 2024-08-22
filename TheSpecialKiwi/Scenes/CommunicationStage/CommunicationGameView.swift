@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CommunicationGameView: View {
     @ObservedObject var viewModel: CommunicationGameViewModel
-    @State private var navigateToLightSensory = false
+    @State private var navigateToSoundGame = false
     @State private var navigateToGameOver = false
     @StateObject var timerHelper: TimerHelper
     @State private var showOverlay = true // Manage overlay visibility
@@ -38,6 +38,8 @@ struct CommunicationGameView: View {
                             .ignoresSafeArea()
                             .onTapGesture {
                                 showOverlay = false
+                                viewModel.loadSoundEffect()
+                                viewModel.startArrow()
                             }
                     } else {
                         //Lottie animation
@@ -58,8 +60,8 @@ struct CommunicationGameView: View {
                                 .offset(x: 0, y: 0)  // Adjust to position the image as desired
                                 .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                                 .onAppear {
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                        navigateToLightSensory = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        navigateToSoundGame = true
                                     }
                                 }
                         }
@@ -93,8 +95,8 @@ struct CommunicationGameView: View {
                         
                         if viewModel.hasWon {
                             NavigationLink(
-                                destination: LightSensoryView().navigationBarBackButtonHidden(),
-                                isActive: $navigateToLightSensory
+                                destination: SoundView().navigationBarBackButtonHidden(),
+                                isActive: $navigateToSoundGame
                             ) {
                                 EmptyView()
                             }
@@ -147,13 +149,22 @@ struct CommunicationGameView: View {
             .onTapGesture {
                 if viewModel.isRunning {
                     viewModel.stopArrow()
-                } else {
-                    viewModel.startArrow()
-                }
+                    print("James: Stopped arrow")
+                } 
+//                else {
+//                    viewModel.startArrow()
+//                    print("James: Started arrow")
+//                }
             }
-            .onAppear {
-                viewModel.resetArrow()
-            }
+//            .onAppear {
+//                viewModel.resetArrow()
+//                if !viewModel.isRunning {
+//                    print("James: Masuk sini")
+//                    viewModel.startArrow()
+//                } else{
+//                    print("James: Bukan situ")
+//                }
+//            }
         }
     }
 }

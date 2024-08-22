@@ -22,16 +22,20 @@ struct GameOverView: View {
                         .environmentObject(NavigationViewModel())
                         .transition(.scale) // No transition effect when presenting the new view
                 }
-            .onTapGesture {
-                viewModel.retry()
-            }
-            .onChange(of: viewModel.shouldRetry) { shouldRetry in
-                if shouldRetry {
-                    withAnimation {
-                        navigateToRoot = true
+                .onAppear{
+                    viewModel.stopSound()
+                    print("GameOver: stop sound")
+                }
+                .onTapGesture {
+                    viewModel.retry()
+                }
+                .onChange(of: viewModel.shouldRetry) { shouldRetry in
+                    if shouldRetry {
+                        withAnimation {
+                            navigateToRoot = true
+                        }
                     }
                 }
-            }
         }
     }
 }

@@ -34,7 +34,6 @@ class CommunicationGameViewModel: ObservableObject {
             self.hasWon = false
             self.hasLost = true
         }
-        loadSoundEffect()
     }
     
     //Loads the sound effect
@@ -43,6 +42,7 @@ class CommunicationGameViewModel: ObservableObject {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
                 audioPlayer?.numberOfLoops = -1 //Loops indefinitely
+                audioPlayer?.play()
                 print("James: Sound playing")
             } catch {
                 print("James: Error loading sound effect: \(error)")
@@ -54,7 +54,6 @@ class CommunicationGameViewModel: ObservableObject {
     func startArrow() {
         isRunning = true
         resultMessage = ""
-        audioPlayer?.play()
         hasWon = false
         hasLost = false
         timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] _ in self?.updateArrowPosition()
@@ -83,6 +82,7 @@ class CommunicationGameViewModel: ObservableObject {
         }
         hasWon = result == "KiwiHappy"
         hasLost = result == "You Lose!"
+        audioPlayer?.stop()
     }
     
     func resetArrow() {

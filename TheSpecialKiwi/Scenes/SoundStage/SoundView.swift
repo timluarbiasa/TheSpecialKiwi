@@ -9,11 +9,13 @@ import SwiftUI
 import Lottie
 
 struct SoundView: View {
+    @EnvironmentObject var navigationViewModel: NavigationViewModel
+    
     @StateObject var viewModel: SoundViewModel
     @StateObject var timerHelper = TimerHelper(totalTime: 10) // 10 seconds for demonstration
     
     @State private var navigateToGameOver = false
-    @State private var navigateToCommunicationGame = false
+    @State private var navigateToLightSensory = false
     
     init() {
         let timerHelperInstance = TimerHelper(totalTime: 10)
@@ -72,7 +74,7 @@ struct SoundView: View {
                                         viewModel.pressBlock(at: index)
                                         let generator = UINotificationFeedbackGenerator()
                                         generator.notificationOccurred(.success)
-                                        print(index)
+                                        print("Justin : Index: \(index)")
                                     }
                             )
                             .position(fruitPosition(index: index, geometry: geometry))
@@ -84,6 +86,7 @@ struct SoundView: View {
                         .onAppear {
                             timerHelper.startTimer()
                         }
+                    
                     NavigationLink(
                         destination: GameOverView(viewModel: GameOverViewModel()).navigationBarBackButtonHidden(),
                         isActive: $navigateToGameOver
@@ -93,8 +96,8 @@ struct SoundView: View {
                     .hidden()
                     
                     NavigationLink(
-                        destination: CommunicationGameView().navigationBarBackButtonHidden(),
-                        isActive: $navigateToCommunicationGame
+                        destination: LightSensoryView().navigationBarBackButtonHidden(),
+                        isActive: $navigateToLightSensory
                     ) {
                         EmptyView()
                     }
@@ -104,7 +107,7 @@ struct SoundView: View {
                         if gameOver {
                             viewModel.stopSound()
                             if viewModel.didWin {
-                                navigateToCommunicationGame = true
+                                navigateToLightSensory = true
                             } else {
                                 viewModel.stopSound()
                                 navigateToGameOver = true
@@ -115,8 +118,21 @@ struct SoundView: View {
             }
         }
         .onDisappear {
-            viewModel.stopSound()
             viewModel.endGame()
+            viewModel.stopSound()
+        }
+        
+        .navigationDestination(for: Game?.self) { game in
+            switch game {
+            case .communication:
+                CommunicationGameView()
+                    .navigationBarBackButtonHidden()
+            case .gameOver:
+                GameOverView(viewModel: GameOverViewModel())
+                    .navigationBarBackButtonHidden()
+            default:
+                EmptyView()
+            }
         }
     }
     

@@ -23,11 +23,10 @@ class SoundViewModel: ObservableObject {
     }
 
     private func startTimer() {
-        // Start a timer that triggers after 10 seconds
         timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
             guard let self = self else { return }
             self.didWin = false
-            self.endGame() // Mark the game as lost
+            self.endGame()
         }
     }
 
@@ -40,19 +39,17 @@ class SoundViewModel: ObservableObject {
         kiwiSuccess = false
         currentActiveIndex = 0
         successfulHolds = 0
-        if showOverlay == false{
-            if gameOver == false{
-                activateNextFruit()
-            }
+        if !showOverlay && !gameOver{
+            activateNextFruit()
         }
-        print("Justin: Start Game Sound Sensory")
+        print("Justin: Start")
     }
     
     func endGame() {
-        timer?.invalidate() // Stop the timer when the game ends
+        timer?.invalidate()
         gameOver = true
-        stopSound()
-        print("Justin: End Game Sound Sensory")
+        stopAllSounds()
+        print("Justin: Ended")
     }
 
     private func resetSounds() {
@@ -63,21 +60,22 @@ class SoundViewModel: ObservableObject {
     }
     
     private func activateNextFruit() {
-        guard currentActiveIndex < interactionOrder.count else {
-            return
-        }
-
-        let index = interactionOrder[currentActiveIndex]
-        sounds[index].isRed = true
-        
-        // Play sound corresponding to the fruit
-        playSound(for: index)
-
-        stopTime = Just(())
-            .delay(for: .seconds(2), scheduler: RunLoop.main)
-            .sink { [ weak self ] in
-                self?.moveToNextFruit()
+        if gameOver == false {
+            guard currentActiveIndex < interactionOrder.count else {
+                return
             }
+
+            let index = interactionOrder[currentActiveIndex]
+            sounds[index].isRed = true
+            
+            playSound(for: index)
+            
+            stopTime = Just(())
+                .delay(for: .seconds(2), scheduler: RunLoop.main)
+                .sink { [weak self] in
+                    self?.moveToNextFruit()
+                }
+        }
     }
 
     private func moveToNextFruit() {
@@ -104,37 +102,43 @@ class SoundViewModel: ObservableObject {
         sounds[index].isRed = false
         successfulHolds += 1
         
-        // Cancel any ongoing timer
         stopTime?.cancel()
 
         if successfulHolds >= 4 {
             kiwiSuccess = true
-            resetSounds() // Stop spawning new Lottie animations
-            stopSound() // Stop the sound when Kiwi turns to SVG
+            resetSounds()
+            stopAllSounds()
             didWin = true
             gameOver = true
-        } else {
+        } else if gameOver == false {
             moveToNextFruit()
         }
     }
 
     private func playSound(for index: Int) {
-        let soundName = "Fruit\(index + 1)" // Corresponding sound file name
+        let soundName = "Fruit\(index + 1)"
         if let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
                 audioPlayer?.play()
+                print("Justin: play sound")
             } catch {
                 print("Justin: Error playing sound: \(error.localizedDescription)")
             }
         }
     }
 
+    private func stopAllSounds() {
+        audioPlayer?.stop()
+        audioPlayer = nil
+    }
+
     func stopSound() {
-        audioPlayer?.stop() // Stop the currently playing sound
+        stopAllSounds()
     }
 
     func randomLottieName(for index: Int) -> String {
         return randomizedLottieAnimations[index]
     }
 }
+

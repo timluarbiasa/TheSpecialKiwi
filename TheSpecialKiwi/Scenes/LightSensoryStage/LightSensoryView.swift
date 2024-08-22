@@ -13,7 +13,7 @@ struct LightSensoryView: View {
     @StateObject private var timerHelper: TimerHelper
     
     @State private var navigateToGameOver = false
-    @State private var navigateToSoundGame = false
+    @State private var navigateToCommunicationGame = false
     @State private var showOverlay = true // Manage overlay visibility
     
     init() {
@@ -107,8 +107,8 @@ struct LightSensoryView: View {
                     
                     // NavigationLink to SoundView on win
                     NavigationLink(
-                        destination: SoundView().navigationBarBackButtonHidden(),
-                        isActive: $navigateToSoundGame
+                        destination: CommunicationGameView().navigationBarBackButtonHidden(),
+                        isActive: $navigateToCommunicationGame
                     ) {
                         EmptyView()
                     }
@@ -119,7 +119,7 @@ struct LightSensoryView: View {
         .onChange(of: viewModel.gameOver) { gameOver in
             if gameOver {
                 if viewModel.didWin {
-                    navigateToSoundGame = true
+                    navigateToCommunicationGame = true
                     viewModel.playWinSound()
                 } else {
                     navigateToGameOver = true
