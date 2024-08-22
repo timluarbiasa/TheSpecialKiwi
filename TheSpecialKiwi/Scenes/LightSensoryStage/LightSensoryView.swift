@@ -15,7 +15,6 @@ struct LightSensoryView: View {
     @State private var navigateToGameOver = false
     @State private var navigateToSoundGame = false
     @State private var showOverlay = true // Manage overlay visibility
-    @ObservedObject var overlayViewModel = OverlayModel() // Overlay
     
     init() {
         let screenWidth = UIScreen.main.bounds.width
@@ -32,13 +31,15 @@ struct LightSensoryView: View {
         NavigationStack {
             ZStack {
                 if showOverlay {
-                    // Pass a closure to start the game and sound when overlay is tapped
-                    OverlayView(viewModel: overlayViewModel) {
-                        showOverlay = false
-                    }
-                    .onAppear {
-                        overlayViewModel.configureStage(for: .SoundView)
-                    }
+                    // Display the SVG overlay instead of the OverlayView
+                    Image("LightSensory")
+                        .resizable()
+                        .scaledToFill()
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            // Hide the overlay when tapped
+                            showOverlay = false
+                        }
                 } else {
                     Image("LightSensory_Background1")
                         .resizable()
@@ -64,7 +65,6 @@ struct LightSensoryView: View {
                                 Image("LightSensory_Background2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                
                                 
                                 if viewModel.showKiwiHappy {
                                     LottieView(name: "KiwiHappy1", shouldPlay: .constant(true))
@@ -96,7 +96,7 @@ struct LightSensoryView: View {
                     )
                 }
                 
-                //NavigationLink to Game Over View
+                // NavigationLink to Game Over View
                 NavigationLink(
                     destination: GameOverView(viewModel: GameOverViewModel()),
                     isActive: $navigateToGameOver
@@ -131,3 +131,4 @@ struct LightSensoryView: View {
 #Preview {
     LightSensoryView()
 }
+

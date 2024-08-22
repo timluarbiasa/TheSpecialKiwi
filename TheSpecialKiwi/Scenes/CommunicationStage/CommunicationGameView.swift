@@ -13,8 +13,7 @@ struct CommunicationGameView: View {
     @State private var navigateToGameOver = false
     @StateObject var timerHelper: TimerHelper
     @State private var showOverlay = true // Manage overlay visibility
-    @ObservedObject var overlayViewModel = OverlayModel() // Overlay view model
-    
+
     let backgroundImageName = "BackgroundJPG"
     let gaugeImageName = "Bar"
     let arrowImageName = "Arrow"
@@ -36,13 +35,13 @@ struct CommunicationGameView: View {
             GeometryReader { geometry in
                 ZStack {
                     if showOverlay {
-                        // Pass a closure to start the game and sound when overlay is tapped
-                        OverlayView(viewModel: overlayViewModel) {
-                            showOverlay = false
-                        }
-                        .onAppear {
-                            overlayViewModel.configureStage(for: .SoundView)
-                        }
+                        Image("VolumeControl")
+                            .resizable()
+                            .scaledToFill()
+                            .ignoresSafeArea()
+                            .onTapGesture {
+                                showOverlay = false
+                            }
                     } else {
                         //Lottie animation
                         if !viewModel.kiwiSuccess {
@@ -161,4 +160,4 @@ struct CommunicationGameView: View {
             }
         }
     }
-
+}

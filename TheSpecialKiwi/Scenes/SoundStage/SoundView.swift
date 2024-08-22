@@ -15,7 +15,6 @@ struct SoundView: View {
     @State private var navigateToGameOver = false
     @State private var navigateToCommunicationGame = false
     @State private var showOverlay = true // Manage overlay visibility
-    @ObservedObject var overlayViewModel = OverlayModel() // Overlay view model
 
     init() {
         let timerHelperInstance = TimerHelper(totalTime: 10)
@@ -27,14 +26,14 @@ struct SoundView: View {
         GeometryReader { geometry in
             ZStack {
                 if showOverlay {
-                    // Pass a closure to start the game and sound when overlay is tapped
-                    OverlayView(viewModel: overlayViewModel) {
-                        showOverlay = false
-                        viewModel.startGame() // Start game and sound after overlay tap
-                    }
-                    .onAppear {
-                        overlayViewModel.configureStage(for: .SoundView)
-                    }
+                    Image("SoundSensory")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            showOverlay = false
+                            viewModel.startGame()
+                        }
                 } else {
                     Image("BG-2")
                         .resizable()
@@ -116,9 +115,6 @@ struct SoundView: View {
                 }
             }
         }
-        .onAppear {
-            overlayViewModel.configureStage(for: .SoundView)
-        }
         .onDisappear {
             viewModel.stopSound()
             viewModel.endGame()
@@ -141,4 +137,3 @@ struct SoundView: View {
     SoundView()
         .previewInterfaceOrientation(.landscapeLeft)
 }
-
