@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-
-import SwiftUI
+import AVFoundation
 
 class LightSensoryViewModel: ObservableObject {
     @Published var rectangleWidth: CGFloat
@@ -18,6 +17,7 @@ class LightSensoryViewModel: ObservableObject {
     
     let screenWidth: CGFloat
     private var timerHelper: TimerHelper
+    private var audioPlayer: AVAudioPlayer?
 
     init(screenWidth: CGFloat, timerHelper: TimerHelper) {
         self.screenWidth = screenWidth
@@ -67,6 +67,20 @@ class LightSensoryViewModel: ObservableObject {
         if showKiwiHappy {
             didWin = true
             endGame()
+        }
+    }
+    
+    func playWinSound() {
+        // Load the sound file from the app bundle
+        if let url = Bundle.main.url(forResource: "LightSensory_Success", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                print("Error: Could not load win sound file - \(error.localizedDescription)")
+            }
+        } else {
+            print("Error: Win sound file not found")
         }
     }
 }

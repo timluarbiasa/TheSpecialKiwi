@@ -35,19 +35,20 @@ struct CommunicationGameView: View {
                 ZStack {
                     //Lottie animation
                     if !viewModel.kiwiSuccess {
-                        LottieCommunicationView(name: "KiwiVolume", loopMode: .loop)
+                        LottieView(name: "KiwiVolume", shouldPlay: .constant(true))
                             .zIndex(-1)
                             .edgesIgnoringSafeArea(.all)
+                            .offset(x: -60)
                     }
                     
                     if viewModel.kiwiSuccess {
                         Image("KiwiHappy")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 860, height: 860)
+                            .frame(width: 850, height: 850)
                             .padding()
-                            .zIndex(10)
-                            .offset(x: 5, y: -20)  // Adjust to position the image as desired
+                            .zIndex(-2)
+                            .offset(x: 0, y: 0)  // Adjust to position the image as desired
                             .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                             .onAppear {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -82,7 +83,7 @@ struct CommunicationGameView: View {
                             }
                         )
                     }
-                                
+                    
                     if viewModel.hasWon {
                         NavigationLink(
                             destination: LightSensoryView().navigationBarBackButtonHidden(),
@@ -111,6 +112,7 @@ struct CommunicationGameView: View {
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
                         .zIndex(-10)
+                        .ignoresSafeArea()
                     
                     //Arrow image
                     Image(arrowImageName)
@@ -118,16 +120,21 @@ struct CommunicationGameView: View {
                         .frame(width: 30, height: 50)
                         .offset(x: -380, y: viewModel.arrow.position - 150)
                         .zIndex(12)
+                        .ignoresSafeArea()
+                    
                     Image(texture)
                         .resizable()
                         .zIndex(13)
                         .blendMode(.multiply)
+                        .ignoresSafeArea()
+                    
                     TimerComponent(timerHelper: timerHelper)
-                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.021)
+                        .position(x: geometry.size.width * 0.6, y: geometry.size.height * 0.015)
                         .onAppear {
                             timerHelper.startTimer()
                         }
                 }
+                .ignoresSafeArea()
             }
             .onTapGesture {
                 if viewModel.isRunning {
