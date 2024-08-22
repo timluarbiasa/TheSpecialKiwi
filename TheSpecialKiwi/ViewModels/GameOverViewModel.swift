@@ -11,14 +11,8 @@ import AVFoundation
 
 class GameOverViewModel: ObservableObject {
     @Published var shouldRetry: Bool = false
-    private var audioPlayer: AVAudioPlayer?
     
     func retry() {
         shouldRetry = true
-        stopSound()
-    }
-    
-    func stopSound() {
-        audioPlayer?.stop() // Stop the currently playing sound
     }
 }

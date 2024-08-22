@@ -18,11 +18,11 @@ class SoundViewModel: ObservableObject {
     private var stopTime: AnyCancellable?
 
     init() {
-        startGame()
-        startTimer()
+//        startGame()
+//        startTimer()
     }
 
-    private func startTimer() {
+    func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
             guard let self = self else { return }
             self.didWin = false
@@ -34,6 +34,7 @@ class SoundViewModel: ObservableObject {
         randomizedLottieAnimations = ["Fruit1-2", "Fruit2-2", "Fruit3-2", "Fruit4-2"].shuffled()
         interactionOrder = Array(0..<sounds.count).shuffled()
         
+        //startTimer()
         resetSounds()
         
         kiwiSuccess = false
@@ -139,6 +140,20 @@ class SoundViewModel: ObservableObject {
 
     func randomLottieName(for index: Int) -> String {
         return randomizedLottieAnimations[index]
+    }
+    
+    func playWinSound() {
+        // Load the sound file from the app bundle
+        if let url = Bundle.main.url(forResource: "LightSensory_Success", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                print("Error: Could not load win sound file - \(error.localizedDescription)")
+            }
+        } else {
+            print("Error: Win sound file not found")
+        }
     }
 }
 

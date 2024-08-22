@@ -91,4 +91,18 @@ class CommunicationGameViewModel: ObservableObject {
         hasWon = false
         hasLost = false
     }
+    
+    func playWinSound() {
+        // Load the sound file from the app bundle
+        if let url = Bundle.main.url(forResource: "LightSensory_Success", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                print("Error: Could not load win sound file - \(error.localizedDescription)")
+            }
+        } else {
+            print("Error: Win sound file not found")
+        }
+    }
 }

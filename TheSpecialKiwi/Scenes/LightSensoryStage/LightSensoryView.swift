@@ -68,7 +68,7 @@ struct LightSensoryView: View {
                                     
                                     
                                     if viewModel.showKiwiHappy {
-                                        LottieView(name: "KiwiHappy1", shouldPlay: .constant(true))
+                                        LottieView(name: "KiwiHappy", shouldPlay: .constant(true))
                                     } else {
                                         LottieView(name: "KiwiLight", shouldPlay: .constant(true))
                                     }
@@ -116,8 +116,8 @@ struct LightSensoryView: View {
                 }
             }
         }
-        .onChange(of: viewModel.gameOver) { gameOver in
-            if gameOver {
+        .onChange(of: viewModel.gameOver) {
+            if viewModel.gameOver {
                 if viewModel.didWin {
                     navigateToCommunicationGame = true
                     viewModel.playWinSound()

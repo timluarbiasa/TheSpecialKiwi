@@ -17,20 +17,16 @@ struct GameOverView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-                .fullScreenCover(isPresented: $navigateToRoot) {
-                    NavigationView()
-                        .environmentObject(NavigationViewModel())
-                        .transition(.scale) // No transition effect when presenting the new view
-                }
-                .onAppear{
-                    viewModel.stopSound()
-                    print("GameOver: stop sound")
-                }
                 .onTapGesture {
                     viewModel.retry()
                 }
-                .onChange(of: viewModel.shouldRetry) { shouldRetry in
-                    if shouldRetry {
+                .navigationDestination(isPresented: $navigateToRoot) {
+                    NavigationView()
+                        .environmentObject(NavigationViewModel())
+                        .transition(.slide) // Apply slide transition here
+                }
+                .onChange(of: viewModel.shouldRetry) {
+                    if viewModel.shouldRetry {
                         withAnimation {
                             navigateToRoot = true
                         }

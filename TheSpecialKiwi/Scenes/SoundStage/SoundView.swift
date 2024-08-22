@@ -34,6 +34,8 @@ struct SoundView: View {
                         .onTapGesture {
                             viewModel.showOverlay = false
                             viewModel.startGame()
+                            viewModel.startTimer()
+                            timerHelper.startTimer()
                         }
                 } else {
                     Image("BG-2")
@@ -103,10 +105,11 @@ struct SoundView: View {
                     }
                     .hidden()
                     
-                    .onChange(of: viewModel.gameOver) { gameOver in
-                        if gameOver {
+                    .onChange(of: viewModel.gameOver) {
+                        if viewModel.gameOver {
                             viewModel.stopSound()
                             if viewModel.didWin {
+                                viewModel.playWinSound()
                                 navigateToLightSensory = true
                             } else {
                                 viewModel.stopSound()

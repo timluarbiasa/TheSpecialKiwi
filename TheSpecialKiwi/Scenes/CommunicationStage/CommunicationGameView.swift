@@ -62,6 +62,7 @@ struct CommunicationGameView: View {
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         navigateToSoundGame = true
+                                        viewModel.playWinSound()
                                     }
                                 }
                         }
@@ -147,24 +148,16 @@ struct CommunicationGameView: View {
                 .ignoresSafeArea()
             }
             .onTapGesture {
-                if viewModel.isRunning {
+                if viewModel.isRunning && showOverlay == false{
                     viewModel.stopArrow()
                     print("James: Stopped arrow")
-                } 
-//                else {
-//                    viewModel.startArrow()
-//                    print("James: Started arrow")
-//                }
+                }
             }
-//            .onAppear {
-//                viewModel.resetArrow()
-//                if !viewModel.isRunning {
-//                    print("James: Masuk sini")
-//                    viewModel.startArrow()
-//                } else{
-//                    print("James: Bukan situ")
-//                }
-//            }
+            .onDisappear{
+                if viewModel.isRunning{
+                    viewModel.stopArrow()
+                }
+            }
         }
     }
 }
