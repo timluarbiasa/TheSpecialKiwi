@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A24B8602C76E3BF0047DA76 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A24B85F2C76E3BF0047DA76 /* Lottie */; };
 		1A24B8622C76E40E0047DA76 /* KiwiHappy1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A24B8612C76E40E0047DA76 /* KiwiHappy1.json */; };
+		1A24B8782C76FD770047DA76 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24B8772C76FD770047DA76 /* ScoreViewModel.swift */; };
+		1A24B87A2C76FE990047DA76 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1A24B8792C76FE990047DA76 /* Lottie */; };
 		1A469AE22C74409A0065336D /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469AE02C74409A0065336D /* NavigationView.swift */; };
 		1A469AE32C74409A0065336D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469AE12C74409A0065336D /* ColorExtension.swift */; };
 		1A469AE62C7440BE0065336D /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469AE52C7440BE0065336D /* NavigationViewModel.swift */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		1A24B8612C76E40E0047DA76 /* KiwiHappy1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy1.json; sourceTree = "<group>"; };
+		1A24B8772C76FD770047DA76 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 		1A469AE02C74409A0065336D /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		1A469AE12C74409A0065336D /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1A469AE52C7440BE0065336D /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A24B8602C76E3BF0047DA76 /* Lottie in Frameworks */,
+				1A24B87A2C76FE990047DA76 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +184,7 @@
 				1A469AF52C7442700065336D /* EyeContactStageViewModel.swift */,
 				1A469B002C7443BB0065336D /* LightSensoryViewModel.swift */,
 				1A469B582C745B830065336D /* SoundViewModel.swift */,
+				1A24B8772C76FD770047DA76 /* ScoreViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -415,7 +418,7 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				1A24B85F2C76E3BF0047DA76 /* Lottie */,
+				1A24B8792C76FE990047DA76 /* Lottie */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -573,6 +576,7 @@
 				1A469AEE2C7441390065336D /* ArrowModel.swift in Sources */,
 				1A469AEB2C7441000065336D /* CommunicationGameView.swift in Sources */,
 				44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */,
+				1A24B8782C76FD770047DA76 /* ScoreViewModel.swift in Sources */,
 				44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */,
 				1A469B1C2C74488E0065336D /* InformationViewController.swift in Sources */,
 				1A469B592C745B830065336D /* SoundViewModel.swift in Sources */,
@@ -937,7 +941,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A24B85F2C76E3BF0047DA76 /* Lottie */ = {
+		1A24B8792C76FE990047DA76 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1A469B752C745EB30065336D /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;

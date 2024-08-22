@@ -1,10 +1,3 @@
-//
-//  CommunicationGameViewModel.swift
-//  TheSpecialKiwi
-//
-//  Created by James Cellars on 14/08/24.
-//
-
 import Foundation
 import SwiftUI
 import Combine
@@ -18,31 +11,34 @@ class CommunicationGameViewModel: ObservableObject {
     @Published var hasWon: Bool = false
     @Published var hasLost: Bool = false
     @Published var kiwiSuccess: Bool = false
-    
+
     private var timer: Timer?
     private var audioPlayer: AVAudioPlayer?
     private var timerHelper: TimerHelper
-    
-    init(timerHelper: TimerHelper) {
+    private var scoreViewModel: ScoreViewModel
+
+    init(timerHelper: TimerHelper, scoreViewModel: ScoreViewModel) {
         self.arrow = ArrowModel(position: 150)
         self.gauge = GaugeModel(position: 150)
         self.timerHelper = timerHelper
+        self.scoreViewModel = scoreViewModel
         
-        //Set up callback for when timer ends
+        // Set up callback for when timer ends
         self.timerHelper.onTimerEnd = { [weak self] in
             guard let self = self else { return }
             self.hasWon = false
             self.hasLost = true
+            self.scoreViewModel.updateHighScore()
+            self.scoreViewModel.resetScore()
         }
         loadSoundEffect()
     }
-    
-    //Loads the sound effect
+
     func loadSoundEffect() {
         if let soundURL = Bundle.main.url(forResource: "Volume", withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                audioPlayer?.numberOfLoops = -1 //Loops indefinitely
+                audioPlayer?.numberOfLoops = -1 // Loops indefinitely
                 print("Sound playing")
             } catch {
                 print("Error loading sound effect: \(error)")
@@ -50,7 +46,6 @@ class CommunicationGameViewModel: ObservableObject {
         }
     }
 
-    
     func startArrow() {
         isRunning = true
         resultMessage = ""
@@ -60,7 +55,7 @@ class CommunicationGameViewModel: ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] _ in self?.updateArrowPosition()
         }
     }
-    
+
     func stopArrow() {
         isRunning = false
         timer?.invalidate()
@@ -68,11 +63,11 @@ class CommunicationGameViewModel: ObservableObject {
         audioPlayer?.stop()
         checkResult()
     }
-    
+
     private func updateArrowPosition() {
         arrow.updatePosition()
     }
-    
+
     private func checkResult() {
         print("Checking result")
         let result = gauge.checkResult(arrowPosition: arrow.position)
@@ -80,11 +75,12 @@ class CommunicationGameViewModel: ObservableObject {
         if result == "KiwiHappy" {
             kiwiSuccess = true
             hasWon = true
+            scoreViewModel.increaseScore(by: 100) // Correctly updating score
         }
         hasWon = result == "KiwiHappy"
         hasLost = result == "You Lose!"
     }
-    
+
     func resetArrow() {
         arrow.resetPosition()
         resultMessage = ""

@@ -18,17 +18,14 @@ struct CommunicationGameView: View {
     let arrowImageName = "Arrow"
     let texture = "Texture"
     
-    init() {
-        let screenWidth = UIScreen.main.bounds.width
+    init(currentScore: Int = 0, highScore: Int = 0) {
         let timerHelperInstance = TimerHelper(totalTime: 10)
+        let scoreViewModel = ScoreViewModel(currentScore: currentScore, highScore: highScore)
         
-        // Initialize the viewModel with the timerHelperInstance
-        _viewModel = ObservedObject(wrappedValue: CommunicationGameViewModel(timerHelper: timerHelperInstance))
-        
-        // Assign the timerHelperInstance to _timerHelper
+        _viewModel = ObservedObject(wrappedValue: CommunicationGameViewModel(timerHelper: timerHelperInstance, scoreViewModel: scoreViewModel))
         _timerHelper = StateObject(wrappedValue: timerHelperInstance)
     }
-
+    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
