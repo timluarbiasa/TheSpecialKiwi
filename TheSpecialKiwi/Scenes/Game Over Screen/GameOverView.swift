@@ -17,18 +17,19 @@ struct GameOverView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-            .background(
-                NavigationLink(destination: NavigationView().environmentObject(NavigationViewModel()), isActive: $navigateToRoot) {
-                    EmptyView()
+                .fullScreenCover(isPresented: $navigateToRoot) {
+                    NavigationView()
+                        .environmentObject(NavigationViewModel())
+                        .transition(.scale) // No transition effect when presenting the new view
                 }
-                    .hidden()
-            )
             .onTapGesture {
                 viewModel.retry()
             }
             .onChange(of: viewModel.shouldRetry) { shouldRetry in
                 if shouldRetry {
-                    navigateToRoot = true
+                    withAnimation {
+                        navigateToRoot = true
+                    }
                 }
             }
         }
