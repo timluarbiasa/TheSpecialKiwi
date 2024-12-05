@@ -5,7 +5,7 @@
 //  Created by Reyhan Ariq Syahalam on 13/08/24.
 //
 
-import SwiftUI
+import SwiftUI			
 
 struct EyeContactStageView: View {
     @ObservedObject var viewModel: EyeContactStageViewModel

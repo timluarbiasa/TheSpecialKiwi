@@ -11,10 +11,17 @@ import SDWebImageLottieCoder
 
 struct LightSensoryView: View {
     @StateObject private var viewModel: LightSensoryViewModel
+    @StateObject private var timerHelper: TimerHelper
     
     init() {
         let screenWidth = UIScreen.main.bounds.width
-        _viewModel = StateObject(wrappedValue: LightSensoryViewModel(screenWidth: screenWidth))
+        let timerHelperInstance = TimerHelper(totalTime: 10)
+        
+        // Initialize the viewModel with the timerHelperInstance
+        _viewModel = StateObject(wrappedValue: LightSensoryViewModel(screenWidth: screenWidth, timerHelper: timerHelperInstance))
+        
+        // Assign the timerHelperInstance to _timerHelper
+        _timerHelper = StateObject(wrappedValue: timerHelperInstance)
     }
     
     var body: some View {
@@ -36,6 +43,7 @@ struct LightSensoryView: View {
                             
                             Button(action: {
                                 viewModel.resetGame()
+                                timerHelper.resetTimer() // Reset the timer when the game resets
                             }) {
                                 Text("Play Again")
                                     .font(.title2)
@@ -76,11 +84,11 @@ struct LightSensoryView: View {
                                     .frame(width: 400, height: 400)
                                     .offset(x: 250, y: 10)
                             } else {
-                                WebImage(url: Bundle.main.url(forResource: "KiwiHappy", withExtension: "json"))
+                                WebImage(url: Bundle.main.url(forResource: "KiwiLight", withExtension: "json"))
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x: 0, y: 0)
+                                    .frame(width: 400, height: 400)
+                                    .offset(x: 250, y: 10)
                             }
                             
                             Image("LightSensory_Texture")
@@ -90,40 +98,21 @@ struct LightSensoryView: View {
                         }
                         .ignoresSafeArea()
                     }
+                    TimerComponent(timerHelper: timerHelper)
+                        .padding(.top, -390)
                 }
-                
-                .contentShape(Rectangle()) // Make the whole screen swipable
+                .contentShape(Rectangle())
                 .onAppear {
-                    viewModel.startTimer() // Start the timer when the view appears
+                    timerHelper.startTimer()
                 }
                 .gesture(
                     DragGesture()
                         .onEnded { value in
-                            // Check if the user swiped left
                             if value.translation.width > 0 {
                                 viewModel.handleSwipe() // Handle the swipe action
                             }
                         }
                 )
-                
-//                VStack {
-//                    GeometryReader { geometry in
-//                        ZStack(alignment: .leading) {
-//                            Rectangle()
-//                                .fill(Color.gray.opacity(0.5))
-//                                .frame(width: geometry.size.width, height: 12)
-//                            
-//                            Rectangle()
-//                                .fill(Color.brown)
-//                                .frame(width: geometry.size.width * viewModel.progress, height: 12)
-//                                .animation(.linear(duration: 1), value: viewModel.progress)
-//                        }
-//                    }
-//                    .frame(height: 12)
-//                    .padding(.horizontal, 20)
-//                    .padding(.top, -5)
-//                    .offset(y: -180)
-//                }
             }
         }
     }
@@ -132,4 +121,3 @@ struct LightSensoryView: View {
 #Preview {
     LightSensoryView()
 }
-

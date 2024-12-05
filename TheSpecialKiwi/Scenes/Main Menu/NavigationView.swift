@@ -22,19 +22,38 @@ struct NavigationView: View {
                 Text("0")
                     .offset(x: 320, y: -85)
                     .font(.custom("LilitaOne", size: 36))
-                    .foregroundColor(Color(hex: "#FACF38"))
+                    .foregroundColor(Color("FACF38"))
                 VStack {
-                    
-                    HStack {
+                    HStack(alignment: .center) {
                         Button(action: {
-                            viewModel.navigateToGame(.communication)
+                            // your code here!
+                        }) {
+                            Image("MuteButton")
+                                .padding(.vertical, 10)
+                        }
+                        .padding(.top, -75)
+                        .padding(.leading, 20)
+                        
+                        Button(action: {
+                            // your code here!
+                            viewModel.navigateToGame(.informationGame)
+                        }) {
+                            Image("InformationButton")
+                                .padding(.vertical, 10)
+                        }
+                        .padding(.top, -75)
+                        .padding(.leading, 8)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            viewModel.navigateToGame(.lightSensory)
                         }) {
                             Image("StartButton")
                                 .padding()
                         }
                         .padding(.top, -55)
                         .padding(.bottom, 26)
-                        .padding(.leading, 550)
                     }
                 }
                 .navigationBarBackButtonHidden(!viewModel.isBackButtonVisible)
@@ -48,25 +67,39 @@ struct NavigationView: View {
                             }
                         }
                     }
+                }                
+                .navigationDestination(isPresented: Binding(
+                    get: { viewModel.currentGame == .communication },
+                    set: { if !$0 { viewModel.goBack() } }
+                )) {
+                    CommunicationGameView(viewModel: CommunicationGameViewModel())
                 }
-                .background(
-                    NavigationLink(destination: CommunicationGameView(viewModel: CommunicationGameViewModel()), isActive: Binding(
-                        get: { viewModel.currentGame == .communication },
-                        set: { if !$0 { viewModel.goBack() } }
-                    )) {
-                        EmptyView()
-                    }
-                    .hidden()
-                )
-                .background(
-                    NavigationLink(destination: EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: movementBounds)), isActive: Binding(
-                        get: { viewModel.currentGame == .eyeContact },
-                        set: { if !$0 { viewModel.goBack() } }
-                    )) {
-                        EmptyView()
-                    }
-                    .hidden()
-                )
+                .navigationDestination(isPresented: Binding(
+                    get: { viewModel.currentGame == .eyeContact },
+                    set: { if !$0 { viewModel.goBack() } }
+                )) {
+                    EyeContactStageView(viewModel: EyeContactStageViewModel(movementBounds: movementBounds))
+                }
+                .navigationDestination(isPresented: Binding(
+                    get: { viewModel.currentGame == .lightSensory },
+                    set: { if !$0 { viewModel.goBack() } }
+                )) {
+                    LightSensoryView()
+                        .navigationBarBackButtonHidden()
+                }
+                .navigationDestination(isPresented: Binding(
+                    get: { viewModel.currentGame == .informationGame },
+                    set: { if !$0 { viewModel.goBack() } }
+                )) {
+                    InformationView()
+                        .ignoresSafeArea()
+                        .navigationBarBackButtonHidden()
+                }
             }
         }
     }
+
+#Preview {
+    NavigationView()
+        .environmentObject(NavigationViewModel())
+}
