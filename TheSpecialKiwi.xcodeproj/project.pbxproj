@@ -22,7 +22,7 @@
 		1A469B012C7443BB0065336D /* LightSensoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B002C7443BB0065336D /* LightSensoryViewModel.swift */; };
 		1A469B092C7443DE0065336D /* LightSensoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B052C7443DE0065336D /* LightSensoryView.swift */; };
 		1A469B142C7445250065336D /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B132C7445250065336D /* TimerComponent.swift */; };
-		1A469B1B2C74488E0065336D /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B192C74488E0065336D /* InformationView.swift */; };
+		1A469B1B2C74488E0065336D /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B192C74488E0065336D /* 2.swift */; };
 		1A469B1C2C74488E0065336D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B1A2C74488E0065336D /* InformationViewController.swift */; };
 		1A469B592C745B830065336D /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B582C745B830065336D /* SoundViewModel.swift */; };
 		1A469B5B2C745C1E0065336D /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A469B5A2C745C1E0065336D /* SoundModel.swift */; };
@@ -53,11 +53,11 @@
 		44138A6B2C6B5037005E5FAD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6A2C6B5037005E5FAD /* PlayerModel.swift */; };
 		44138A6D2C6B5269005E5FAD /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6C2C6B5269005E5FAD /* TimerHelper.swift */; };
 		44138A6F2C6B5273005E5FAD /* StageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44138A6E2C6B5273005E5FAD /* StageManager.swift */; };
-		EF94FC652C75DD3600C4D7B2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EF94FC642C75DD3600C4D7B2 /* Lottie */; };
+		4414213F2C75E6BB00D39F4C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4414213E2C75E6BB00D39F4C /* Lottie */; };
+		4426CB292C75F2AA00762EB0 /* NavigationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426CB282C75F2AA00762EB0 /* NavigationViewModelTests.swift */; };
 		EFF519562C75DE040072E569 /* KiwiHappy.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF519502C75DE040072E569 /* KiwiHappy.json */; };
 		EFF519582C75DE040072E569 /* KiwiLight.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF519522C75DE040072E569 /* KiwiLight.json */; };
 		EFF519592C75DE040072E569 /* LightSensory_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFF519542C75DE040072E569 /* LightSensory_Success.mp3 */; };
-		EFF5195B2C75DE580072E569 /* KiwiHappy1.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF5195A2C75DE580072E569 /* KiwiHappy1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		1A469B002C7443BB0065336D /* LightSensoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensoryViewModel.swift; sourceTree = "<group>"; };
 		1A469B052C7443DE0065336D /* LightSensoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensoryView.swift; sourceTree = "<group>"; };
 		1A469B132C7445250065336D /* TimerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
-		1A469B192C74488E0065336D /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		1A469B192C74488E0065336D /* 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		1A469B1A2C74488E0065336D /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		1A469B582C745B830065336D /* SoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		1A469B5A2C745C1E0065336D /* SoundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
@@ -129,10 +129,10 @@
 		44138A6A2C6B5037005E5FAD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		44138A6C2C6B5269005E5FAD /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		44138A6E2C6B5273005E5FAD /* StageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManager.swift; sourceTree = "<group>"; };
+		4426CB282C75F2AA00762EB0 /* NavigationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModelTests.swift; sourceTree = "<group>"; };
 		EFF519502C75DE040072E569 /* KiwiHappy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiHappy.json; sourceTree = "<group>"; };
 		EFF519522C75DE040072E569 /* KiwiLight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KiwiLight.json; sourceTree = "<group>"; };
 		EFF519542C75DE040072E569 /* LightSensory_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LightSensory_Success.mp3; sourceTree = "<group>"; };
-		EFF5195A2C75DE580072E569 /* KiwiHappy1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KiwiHappy1.json; path = ../../../../../../../../Downloads/KiwiHappy1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF94FC652C75DD3600C4D7B2 /* Lottie in Frameworks */,
+				4414213F2C75E6BB00D39F4C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +166,7 @@
 			children = (
 				1A469AE12C74409A0065336D /* ColorExtension.swift */,
 				1A469AE02C74409A0065336D /* NavigationView.swift */,
-				1A469B192C74488E0065336D /* InformationView.swift */,
+				1A469B192C74488E0065336D /* 2.swift */,
 				1A469B1A2C74488E0065336D /* InformationViewController.swift */,
 			);
 			path = "Main Menu";
@@ -307,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				44138A452C6B4AED005E5FAD /* TheSpecialKiwiTests.swift */,
+				4426CB282C75F2AA00762EB0 /* NavigationViewModelTests.swift */,
 			);
 			path = TheSpecialKiwiTests;
 			sourceTree = "<group>";
@@ -384,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				EFF519502C75DE040072E569 /* KiwiHappy.json */,
-				EFF5195A2C75DE580072E569 /* KiwiHappy1.json */,
 				EFF519522C75DE040072E569 /* KiwiLight.json */,
 			);
 			path = LightSensoryLottie;
@@ -415,7 +415,7 @@
 			);
 			name = TheSpecialKiwi;
 			packageProductDependencies = (
-				EF94FC642C75DD3600C4D7B2 /* Lottie */,
+				4414213E2C75E6BB00D39F4C /* Lottie */,
 			);
 			productName = TheSpecialKiwi;
 			productReference = 44138A2F2C6B4AEC005E5FAD /* TheSpecialKiwi.app */;
@@ -520,7 +520,6 @@
 				1A8D7C132C7598020073C3CA /* KiwiVolume.json in Resources */,
 				1A469B742C745C640065336D /* Fruit2.mp3 in Resources */,
 				EFF519562C75DE040072E569 /* KiwiHappy.json in Resources */,
-				EFF5195B2C75DE580072E569 /* KiwiHappy1.json in Resources */,
 				1A469B682C745C5B0065336D /* Fruit4-2.json in Resources */,
 				1A469B722C745C640065336D /* Fruit4.mp3 in Resources */,
 				44138A392C6B4AED005E5FAD /* Assets.xcassets in Resources */,
@@ -563,7 +562,7 @@
 				1A469AF42C7441CC0065336D /* GameOverView.swift in Sources */,
 				44138A692C6B5024005E5FAD /* ButtonComponent.swift in Sources */,
 				1A469B5F2C745C410065336D /* SoundView.swift in Sources */,
-				1A469B1B2C74488E0065336D /* InformationView.swift in Sources */,
+				1A469B1B2C74488E0065336D /* 2.swift in Sources */,
 				44138A372C6B4AEC005E5FAD /* Item.swift in Sources */,
 				1A469AF62C7442700065336D /* EyeContactStageViewModel.swift in Sources */,
 				1A469AFA2C7442900065336D /* EyeModel.swift in Sources */,
@@ -588,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4426CB292C75F2AA00762EB0 /* NavigationViewModelTests.swift in Sources */,
 				44138A462C6B4AED005E5FAD /* TheSpecialKiwiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,7 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = 87N548UZ24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -772,7 +772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheSpecialKiwi/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = 87N548UZ24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -937,7 +937,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EF94FC642C75DD3600C4D7B2 /* Lottie */ = {
+		4414213E2C75E6BB00D39F4C /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Lottie;
 		};

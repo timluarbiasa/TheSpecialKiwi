@@ -108,6 +108,7 @@ class SoundViewModel: ObservableObject {
             stopSound() // Stop the sound when Kiwi turns to SVG
             didWin = true
             gameOver = true
+            print("Win")
         } else {
             moveToNextFruit()
         }
